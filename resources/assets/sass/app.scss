@@ -23,6 +23,58 @@ h2 {
 .navbar {
 	border: none;
 	border-bottom: 2px solid $brand-primary;
+	min-height: 62px;
+	text-transform: uppercase;
+	
+	.navbar-toggle {
+		padding-top: 13px;
+		padding-bottom: 13px;
+		background-color: #fff;
+
+		&:hover, &:active, &:focus {
+			.icon-bar {
+				background-color: $brand-primary;
+			}
+			background-color: #fff;
+		}
+	}
+
+	.navbar-nav > li > a, {
+		padding-top: 19px;
+		padding-bottom: 19px;
+	}
+
+	.navbar-btn {
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.btn-facebook {
+			float: right;
+		}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		.navbar-btn {
+			margin-top: 0;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			text-align: left;
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+.navbar-brand {
+	padding: 0 20px 0 10px;
+
+	&, > img {
+		height: 60px;
+	}
 }
 
 footer {

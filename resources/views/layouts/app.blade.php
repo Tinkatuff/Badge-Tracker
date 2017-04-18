@@ -34,7 +34,9 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">{{ config('app.name') }}</a>
+			<a class="navbar-brand" href="#">
+				<img alt="{{ config('app.name') }}" src="{{ asset('images/logo.png') }}">
+			</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -45,10 +47,10 @@
 				</li>
 			</ul>
 			
-			<div class="navbar-form">
-				<a class="btn btn-facebook pull-right" href="" target="_blank">
+			<div class="clearfix">
+				<a class="btn btn-facebook navbar-btn" href="" target="_blank">
 					<i class="fa fa-facebook" aria-title="Facebook" aria-hidden="true"></i>
-					Join Group
+					Join <span class="visible-xs-inline">Facebook</span> Group
 				</a>
 			</div>
 		</div><!-- /.navbar-collapse -->
