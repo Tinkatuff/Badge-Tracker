@@ -1,9 +1,99 @@
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
+@import url(https://fonts.googleapis.com/css?family=Lato);
 // Variables
 @import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import 'node_modules/font-awesome/scss/font-awesome.scss';
+
+
+h1 {
+	color: black;
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 24px;
+}
+
+.navbar {
+	border: none;
+	border-bottom: 2px solid $brand-primary;
+}
+
+footer {
+	padding: 1em;
+	text-align: center;
+	font-size: 12px;
+}
+
+.btn-facebook {
+	background-color: $facebook-blue;
+	border: 1px solid #2A457F;
+	color: #fff;
+
+	&:hover, &:focus, &:active {
+		background-color: lighten($facebook-blue, 5%);
+		border-color: $facebook-blue;
+		color: #fff;
+	}
+
+	.fa-facebook {
+		margin-right: 0.5em;
+	}
+}
+
+ol.challenger-list {
+	list-style: none;
+	margin: 1em 0;
+	padding: 0;
+	border-bottom: 1px solid silver;
+
+	@include clearfix;
+
+	li.challenger > a {
+		display: block;
+		height: 55px;
+		padding: 5px 10px;
+		color: inherit;
+
+		&:hover {
+			background-color: $lt-gray;
+			cursor: pointer;
+		}
+
+		&, * {
+			line-height: 45px;
+		}
+	}
+
+	h2.name {
+		@extend .pull-left;
+		margin: 0;
+	}
+
+	.stats {
+		@extend .pull-right;
+		font-size: 12px;
+
+		> span {
+			display: inline-block;
+
+			+ span {
+				margin-left: 1em;
+			}
+
+			i {
+				vertical-align: middle;
+				display: inline-block;
+				color: $brand-primary;
+				font-size: 16px;
+				padding-right: 0.25em;
+			}
+		}
+	}
+}
