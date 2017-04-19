@@ -24,3 +24,18 @@ const app = new Vue({
 $(document).ready(function() {
     $('footer').stickyFooter();
 });
+
+// Re-render anything bound to page resize when the navbar expands
+(function() {
+    var interval;
+    $('#navbar').on('show.bs.collapse hide.bs.collapse', function() {
+        if (interval) {
+            clearInterval(interval);
+        }
+        interval = setInterval(function() {
+            $(window).trigger('resize');
+        }, 50);
+    }).on('hidden.bs.collapse shown.bs.collapse', function() {
+        clearInterval(interval);
+    });
+})();
