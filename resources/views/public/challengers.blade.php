@@ -11,9 +11,9 @@
 						<h1>Challenger Directory</h1>
 					</div>
 					<div class="col-sm-6">
-						<form class="search">
+						<form class="filter" data-container=".challenger-list" data-items=".challenger">
 							<div class="input-group">
-								<input type="text" name="search" class="form-control" placeholder="Filter Challengers">
+								<input type="text" data-search=".name" class="form-control" placeholder="Filter Challengers">
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="submit">
 										<i class="fa fa-search" aria-hidden="true" aria-title="Search"></i>

@@ -39,3 +39,5 @@ $(document).ready(function() {
         clearInterval(interval);
     });
 })();
+
+require('./filter');
