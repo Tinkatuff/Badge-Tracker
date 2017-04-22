@@ -25,51 +25,23 @@
 				</div>
 
 				<ol class="challenger-list">
+					@foreach ($challengers as $challenger)
 					<li class="challenger">
 						<a href="#">
-							<h2 class="name">Agent Whatever</h2>
+							<h2 class="name">{{ $challenger->name }}</h2>
 							<div class="stats">
 								<span class="badges">
 									<i class="fa fa-shield" aria-hidden="true" title="5 of 18 Badges Won"></i>
-									5 / 18
+									{{ $challenger->current_badges }} / {{ $season_badges }}
 								</span>
 								<span class="since">
 									<i class="fa fa-calendar" aria-hidden="true" title="Challenger Since Season 1"></i>
-									Season 1
+									{{ $challenger->joined_season }}
 								</span>
 							</div>
 						</a>
 					</li>
-					<li class="challenger">
-						<a href="#">
-							<h2 class="name">Not You</h2>
-							<div class="stats">
-								<span class="badges">
-									<i class="fa fa-shield" aria-hidden="true" title="5 of 18 Badges Won"></i>
-									1 / 18
-								</span>
-								<span class="since">
-									<i class="fa fa-calendar" aria-hidden="true" title="Challenger Since Season 1"></i>
-									Season 2
-								</span>
-							</div>
-						</a>
-					</li>
-					<li class="challenger">
-						<a href="#">
-							<h2 class="name">Your Mother</h2>
-							<div class="stats">
-								<span class="badges">
-									<i class="fa fa-shield" aria-hidden="true" title="5 of 18 Badges Won"></i>
-									0 / 18
-								</span>
-								<span class="since">
-									<i class="fa fa-calendar" aria-hidden="true" title="Challenger Since Season 1"></i>
-									Season 0
-								</span>
-							</div>
-						</a>
-					</li
+					@endforeach
 				</ol>
 			</div>
 			<div class="col-md-4 hidden-sm hidden-xs">

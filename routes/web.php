@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('public.challengers');
-});
+Route::get('/', [
+	'uses' => 'ChallengerController@index',
+	'as' => 'home'
+]);
