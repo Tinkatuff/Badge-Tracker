@@ -18,6 +18,7 @@ class CreateChallengersTable extends Migration
 			$table->string('name');
 			$table->integer('joined_season_id')->unsigned()->nullable();
 			$table->date('join_date');
+			$table->integer('current_season_badges')->default(0);
 			$table->timestamps();
 
 			$table->foreign('joined_season_id')->references('id')->on('seasons');
