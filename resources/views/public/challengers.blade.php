@@ -5,7 +5,7 @@
 @section('content')
 	<div class="container" id="challengers">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
 				<div class="row">
 					<div class="col-sm-6">
 						<h1>Challenger Directory</h1>
@@ -43,9 +43,6 @@
 					</li>
 					@endforeach
 				</ol>
-			</div>
-			<div class="col-md-4 hidden-sm hidden-xs">
-				Sidebar
 			</div>
 		</div>
 	</div>
