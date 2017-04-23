@@ -11,6 +11,10 @@ class Season extends Model
 	protected $dates = ['start_date', 'end_date'],
 		$guarded = ['id'];
 
+	function badges() {
+		return $this->hasMany('App\Models\Badge');
+	}
+
 	// We could give this an actual name field, but id works for me for now
 	function __toString() {
 		return $this->name;

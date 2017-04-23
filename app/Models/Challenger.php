@@ -16,7 +16,7 @@ class Challenger extends Model
 		return $this->belongsToMany('App\Models\Badge', 'challenger_badge');
 	}
 
-	function season_badges($id = null) {
+	function countSeasonBadges($id = null) {
 		if (is_null($id)) {
 			$id = Season::currentSeason()->id;
 		}

@@ -32,7 +32,7 @@ class SeasonsSeeder extends Seeder
 			],
 			[
 				'name' => 'Season 4',
-				'start_date' => '2016-05-13'
+				'start_date' => '2017-05-13'
 			]
 		];
 

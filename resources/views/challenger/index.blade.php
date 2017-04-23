@@ -32,7 +32,7 @@
 								<div class="stats">
 									<span class="badges">
 										<i class="fa fa-shield" aria-hidden="true" title="5 of 18 Badges Won"></i>
-										{{ $challenger->current_badges }} / {{ $season_badges }}
+										{{ $challenger->current_season_badges }} / {{ $season_badges }}
 									</span>
 									<span class="since">
 										<i class="fa fa-calendar" aria-hidden="true" title="Challenger Since Season 1"></i>

@@ -117,6 +117,7 @@ ol.challenger-list {
 	@include clearfix;
 
 	li.challenger > a {
+		position: relative;
 		display: block;
 		height: 55px;
 		padding: 5px 10px;
@@ -134,13 +135,20 @@ ol.challenger-list {
 	}
 
 	h2.name {
-		@extend .pull-left;
 		margin: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		margin-right: 140px;
 	}
 
 	.stats {
-		@extend .pull-right;
+		width: 140px;
 		font-size: 12px;
+		padding: 5px 0;
+		position: absolute;
+		top: 0;
+		right: 0;
 
 		> span {
 			display: inline-block;
@@ -156,6 +164,19 @@ ol.challenger-list {
 				font-size: 16px;
 				padding-right: 0.25em;
 			}
+		}
+	}
+
+	@media (max-width: 400px) {
+		.stats {
+			.since {
+				display: none;
+			}
+			width: 50px;
+		}
+
+		h2.name {
+			margin-right: 50px;
 		}
 	}
 }
