@@ -26,21 +26,21 @@
 
 				<ol class="challenger-list">
 					@foreach ($challengers as $challenger)
-					<li class="challenger">
-						<a href="#">
-							<h2 class="name">{{ $challenger->name }}</h2>
-							<div class="stats">
-								<span class="badges">
-									<i class="fa fa-shield" aria-hidden="true" title="5 of 18 Badges Won"></i>
-									{{ $challenger->current_badges }} / {{ $season_badges }}
-								</span>
-								<span class="since">
-									<i class="fa fa-calendar" aria-hidden="true" title="Challenger Since Season 1"></i>
-									{{ $challenger->joined_season }}
-								</span>
-							</div>
-						</a>
-					</li>
+						<li class="challenger">
+							<a href="{{ route('challenger.show', $challenger) }}">
+								<h2 class="name">{{ $challenger->name }}</h2>
+								<div class="stats">
+									<span class="badges">
+										<i class="fa fa-shield" aria-hidden="true" title="5 of 18 Badges Won"></i>
+										{{ $challenger->current_badges }} / {{ $season_badges }}
+									</span>
+									<span class="since">
+										<i class="fa fa-calendar" aria-hidden="true" title="Challenger Since Season 1"></i>
+										{{ $challenger->joined_season }}
+									</span>
+								</div>
+							</a>
+						</li>
 					@endforeach
 				</ol>
 			</div>

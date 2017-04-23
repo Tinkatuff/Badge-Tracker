@@ -12,6 +12,18 @@
 */
 
 Route::get('/', [
+	'as' => 'home',
+	'uses' => function() {
+		return redirect()->route('challenger.index');
+	}
+]);
+
+Route::get('/challengers', [
 	'uses' => 'ChallengerController@index',
-	'as' => 'home'
+	'as' => 'challenger.index'
+]);
+
+Route::get('/challengers/{id}', [
+	'uses' => 'ChallengerController@show',
+	'as' => 'challenger.show'
 ]);

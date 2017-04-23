@@ -34,7 +34,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="{{ route('home') }}">
 				<img alt="{{ config('app.name') }}" src="{{ asset('images/logo.png') }}">
 			</a>
 		</div>
@@ -42,8 +42,8 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav">
-				<li class="active">
-					<a href="#">Challengers</a>
+				<li class="{{ App\class_if_route('active', 'challenger.*') }}">
+					<a href="{{ route('challenger.index') }}">Challengers</a>
 				</li>
 			</ul>
 			
