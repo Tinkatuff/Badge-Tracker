@@ -19,7 +19,7 @@ class CreateChallengerBadgeTable extends Migration
 			$table->integer('awarded_by_id')->unsigned();
 			$table->dateTime('awarded_at');
 
-			$table->unique(['challenger_id', 'badge_id']);
+			$table->primary(['challenger_id', 'badge_id']);
 			$table->foreign('challenger_id')->references('id')->on('challengers');
 			$table->foreign('badge_id')->references('id')->on('badges');
 			$table->foreign('awarded_by_id')->references('id')->on('users');
