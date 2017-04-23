@@ -25,12 +25,12 @@ class CreateChallengersTable extends Migration
 		});
 
 		Schema::create('challenger_data', function (Blueprint $table) {
+			$table->increments('id');
 			$table->integer('challenger_id')->unsigned();
 			$table->string('name');
 			$table->text('data');
 			$table->timestamps();
 
-			$table->unique(['challenger_id', 'name']);
 			$table->foreign('challenger_id')->references('id')->on('challengers');
 		});
 	}
