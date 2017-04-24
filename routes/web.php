@@ -23,7 +23,7 @@ Route::get('/challengers', [
 	'as' => 'challenger.index'
 ]);
 
-Route::get('/challengers/{id}', [
+Route::get('/challengers/{challenger}', [
 	'uses' => 'ChallengerController@show',
 	'as' => 'challenger.show'
 ]);

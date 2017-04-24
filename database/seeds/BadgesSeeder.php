@@ -16,7 +16,7 @@ class BadgesSeeder extends Seeder
 	public function run()
 	{
 		$types = Type::all();
-		$season = Season::orderBy('id', 'DESC')->take(1)->first();
+		$season = Season::currentSeason();
 
 		foreach ($types as $type) {
 			Badge::create([

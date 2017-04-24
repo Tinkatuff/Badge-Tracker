@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('./filter');
 
 // window.Vue = require('vue');
 
@@ -23,6 +24,7 @@ require('./bootstrap');
 
 $(document).ready(function() {
     $('footer').stickyFooter();
+    $('.equal-height').equalHeight();
 });
 
 // Re-render anything bound to page resize when the navbar expands
@@ -39,5 +41,3 @@ $(document).ready(function() {
         clearInterval(interval);
     });
 })();
-
-require('./filter');
