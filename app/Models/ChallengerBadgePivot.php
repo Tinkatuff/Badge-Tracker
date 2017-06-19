@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class ChallengerBadgePivot extends Pivot {
 
-	protected $dates = ['awarded_at'],
-		$touches = ['challenger'];
+	protected $dates = ['awarded_at'];
 
 	function awarded_by() {
 		return $this->belongsTo('App\User');

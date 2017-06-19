@@ -55,7 +55,7 @@
 						@if (!$challenger->social->isEmpty())
 							<div class="social-media">
 							@foreach ($challenger->social as $social)
-								<a href="{{ $social->url }}"><i class="fa fa-{{ $social->service }}-square"></i></a>
+								<a href="{{ $social->url }}" target="_blank"><i class="fa fa-{{ $social->service }}-square"></i></a>
 							@endforeach
 							</div>
 						@endif

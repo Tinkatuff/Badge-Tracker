@@ -35,11 +35,9 @@ class ChallengerSeeder extends Seeder
 					]];
 				});
 
-				$c->badges()->sync($badges);
+				$c->syncBadges($badges);
 				$c->data()->saveMany(factory(ChallengerData::class, rand(0, 3))->make());
 				$c->social()->saveMany(factory(ChallengerSocial::class, rand(0, 3))->make());
-				$c->current_season_badges = $c->seasonBadgeCount();
-				$c->save();
 			});
 	}
 }

@@ -6,9 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class ChallengerData extends Model
 {
-	protected $dates = ['start_date', 'end_date'],
-		$guarded = ['id'],
-		$table = 'challenger_data';
+	protected $guarded = ['id'],
+		$table = 'challenger_data',
+		$touches = ['challenger'];
+
+	static function suggestions() {
+		return [
+			'3DS Friend Code',
+			'Switch Friend Code',
+			'Real Name',
+			'In-Game',
+			'Location'
+		];
+	}
 
 	function challenger() {
 		return $this->belongsTo('App\Models\Challenger');

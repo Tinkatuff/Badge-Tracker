@@ -52,4 +52,11 @@ class Challenger extends Model
 	function __toString() {
 		return $this->name;
 	}
+
+	function syncBadges($badges, $detach = true) {
+		$sync = $this->badges()->sync($badges, $detach);
+		$this->current_season_badges = $this->seasonBadgeCount();
+		$this->save();
+		return $sync;
+	}
 }
