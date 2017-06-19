@@ -25,6 +25,15 @@ class Challenger extends Model
 			->orderBy('challenger_badge.awarded_at');
 	}
 
+	function getCurrentSeasonBadgesAttribute($value) {
+		if (is_null($value)) {
+			$value = $this->current_season_badges = $this->seasonBadgeCount();
+			$this->save();
+		}
+
+		return $value;
+	}
+
 	public function newPivot(Model $parent, array $attributes, $table, $exists, $using = NULL) {
 		if ($parent instanceof Badge) {
 			return new ChallengerBadgePivot($parent, $attributes, $table, $exists, $using);

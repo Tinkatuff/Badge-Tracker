@@ -21,9 +21,34 @@ class Season extends Model
 	}
 
 	static function currentSeason() {
-		return self::whereDate('start_date', '<=', Carbon::now())
+		$current = self::where('is_current', true)->first();
+
+		if (!is_null($current)) {
+			return $current;
+		}
+
+		$new_current = self::whereDate('start_date', '<=', Carbon::now())
 			->whereHas('badges')
 			->orderBy('start_date', 'DESC')
 			->first();
+
+		if (!is_null($new_current)) {
+			$new_current->setCurrent();
+			return $new_current;
+		}
+
+		return null;
+	}
+
+	function setCurrent() {
+		if ($this->badges()->count() < 1) {
+			return false;
+		}
+
+		Season::where('is_current', true)->update(['is_current' => false]);
+		Challenger::whereNotNull('current_season_badges')->update(['current_season_badges' => null]);
+		$this->is_current = true;
+		$this->save();
+		return true;
 	}
 }
