@@ -18,6 +18,13 @@ Route::get('/', [
 	}
 ]);
 
+Route::get('about', [
+	'as' => 'about',
+	'uses' => function() {
+		return view('about.about');
+	}
+]);
+
 Route::get('/challengers', [
 	'uses' => 'ChallengerController@index',
 	'as' => 'challenger.index'
