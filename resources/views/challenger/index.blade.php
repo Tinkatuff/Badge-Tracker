@@ -9,6 +9,7 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<h1>Challenger Directory</h1>
+						<div>Displaying badge totals for {{ App\Models\Season::currentSeason() }}</div>
 					</div>
 					<div class="col-sm-6">
 						<form class="filter" data-container=".challenger-list" data-items=".challenger">

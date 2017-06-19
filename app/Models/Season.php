@@ -22,6 +22,8 @@ class Season extends Model
 
 	static function currentSeason() {
 		return self::whereDate('start_date', '<=', Carbon::now())
-			->orderBy('id', 'DESC')->take(1)->first();
+			->whereHas('badges')
+			->orderBy('start_date', 'DESC')
+			->first();
 	}
 }
