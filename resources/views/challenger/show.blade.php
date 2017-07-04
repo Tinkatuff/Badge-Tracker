@@ -19,7 +19,7 @@
 								<div class="well">
 									<img src="{{ $badge->image_url }}" alt="{{ $badge }}">
 								</div>
-								<div class="badge-name">{{ $badge->type }}</div>
+								<div class="badge-name">{{ $badge->name }}</div>
 							</div>
 						</div>
 					@endforeach
@@ -30,7 +30,7 @@
 								<div class="well">
 									<img src="{{ $badge->image_url }}" alt="{{ $badge }}" class="equal-height">
 								</div>
-								<div class="badge-name">{{ $badge->type }}</div>
+								<div class="badge-name">{{ $badge->name }}</div>
 							</div>
 						</div>
 					@endforeach
