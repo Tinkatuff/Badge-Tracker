@@ -48,7 +48,14 @@
 			</ul>
 			
 			<div class="clearfix">
-				<a class="btn btn-facebook navbar-btn" href="" target="_blank">
+				@if (Auth::check())
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="{{ route('logout') }}">Log Out</a>
+						</li>
+					</ul>
+				@endif
+				<a class="btn btn-facebook navbar-btn" href="https://www.facebook.com/groups/418038738406752" target="_blank">
 					<i class="fa fa-facebook" aria-title="Facebook" aria-hidden="true"></i>
 					Join <span class="visible-xs-inline">Facebook</span> Group
 				</a>
@@ -66,6 +73,6 @@
 @section('footer')
 	<footer>
 		The Team Rocket AZ Pokemon League is a fan-run challenge hosted in the Phoenix, AZ metro area.
-		Visit our <a href="#">Facebook Page</a> for more info!
+		Visit our <a href="https://www.facebook.com/TeamRocketAZ">Facebook Page</a> for more info!
 	</footer>
 @stop
