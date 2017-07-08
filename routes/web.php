@@ -25,32 +25,6 @@ Route::get('about', [
 	}
 ]);
 
-Route::get('/challengers', [
-	'uses' => 'ChallengerController@index',
-	'as' => 'challenger.index'
-]);
-
-Route::get('/challengers/{challenger}', [
-	'uses' => 'ChallengerController@show',
-	'as' => 'challenger.show'
-]);
-
-
-Route::get('/logout', [
-	'uses' => 'FacebookController@logout',
-	'as' => 'logout'
-]);
-
-Route::get('/login', [
-	'uses' => 'FacebookController@login',
-	'as' => 'login'
-]);
-
-Route::get('/facebook/callback', [
-	'uses' => 'FacebookController@callback',
-	'as' => 'facebook.callback'
-]);
-
 Route::group([
 	'as' => 'admin.',
 	'middleware' => 'auth',
@@ -87,3 +61,29 @@ Route::group([
 		'as' => 'challenger.submitAward'
 	]);
 });
+
+Route::get('/challengers', [
+	'uses' => 'ChallengerController@index',
+	'as' => 'challenger.index'
+]);
+
+Route::get('/challengers/{challenger}', [
+	'uses' => 'ChallengerController@show',
+	'as' => 'challenger.show'
+]);
+
+
+Route::get('/logout', [
+	'uses' => 'FacebookController@logout',
+	'as' => 'logout'
+]);
+
+Route::get('/login', [
+	'uses' => 'FacebookController@login',
+	'as' => 'login'
+]);
+
+Route::get('/facebook/callback', [
+	'uses' => 'FacebookController@callback',
+	'as' => 'facebook.callback'
+]);
