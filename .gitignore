@@ -2,7 +2,10 @@
 /public/hot
 /public/storage
 /public/css/app.css
+/public/css/app.*.css
 /public/js/app.js
+/public/js/app.*.js
+/public/mix-manifest.json
 /public/fonts/vendor
 /storage/*.key
 /vendor

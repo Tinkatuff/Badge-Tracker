@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @push('styles')
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css">
 @endpush
 
 @push('scripts')
@@ -10,7 +10,7 @@
 			'csrfToken' => csrf_token(),
 		]) !!};
 	</script>
-	<script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
+	<script src="{{ mix('js/app.js') }}" type="text/javascript"></script>
 @endpush
 
 @section('body')
