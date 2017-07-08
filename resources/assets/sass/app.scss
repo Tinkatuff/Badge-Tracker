@@ -16,8 +16,11 @@ h1 {
 	margin-top: 0;
 
 	&.subtitled {
-		float: left;
-		margin-right: 0.5em;
+
+		@media (min-width: 500px) {
+			float: left;
+			margin-right: 0.5em;
+		}
 
 		+ h2 {
 			color: $brand-primary;
