@@ -9,7 +9,6 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<h1>Challenger Directory</h1>
-						<div>Displaying badge totals for {{ App\Models\Season::currentSeason() }}</div>
 					</div>
 					<div class="col-sm-6">
 						<form class="filter" data-container=".challenger-list" data-items=".challenger">
@@ -22,6 +21,15 @@
 								</span>
 							</div>
 						</form>
+					</div>
+				</div>
+
+				<div class="key">
+					<div class="badges">
+						<i class="fa fa-shield stats-icon" aria-hidden="true" title="5 of 18 Badges Won"></i> Badges earned in {{ App\Models\Season::currentSeason() }}
+					</div>
+					<div class="since">
+						<i class="fa fa-calendar stats-icon" aria-hidden="true" title="Challenger Since Season 1"></i> First season participation
 					</div>
 				</div>
 
