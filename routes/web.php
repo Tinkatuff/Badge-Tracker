@@ -76,4 +76,14 @@ Route::group([
 		'uses' => 'ChallengerController@update',
 		'as' => 'challenger.update'
 	]);
+
+	Route::get('/challengers/{challenger}/award', [
+		'uses' => 'ChallengerController@award',
+		'as' => 'challenger.award'
+	]);
+
+	Route::post('/challengers/{challenger}/award', [
+		'uses' => 'ChallengerController@submitAward',
+		'as' => 'challenger.submitAward'
+	]);
 });

@@ -10,6 +10,7 @@
 
 		@if (Auth::check() && Auth::user()->isAdmin())
 			<div class="actions">
+				<a class="btn btn-default" href="{{ route('admin.challenger.award', $challenger) }}"><i class="fa fa-shield"></i> Award Badge</a>
 				<a class="btn btn-default" href="{{ route('admin.challenger.edit', $challenger) }}"><i class="fa fa-edit"></i> Edit Profile</a>
 			</div>
 		@endif
@@ -20,7 +21,7 @@
 				<h3>Badges: {{ $current_season }}</h3>
 
 				<div class="row badge-list">
-					@foreach ($season_badges as $badge)
+					@forelse ($season_badges as $badge)
 						<div class="col-xs-4 col-sm-3 equal-height">
 							<div class="badge-league">
 								<div class="well">
@@ -29,8 +30,16 @@
 								<div class="badge-name">{{ $badge->name }}</div>
 							</div>
 						</div>
-					@endforeach
+					@empty
+						<div class="col-xs-12">No badges won yet this season!</div>
+					@endforelse
+				</div>
 
+				<hr>
+
+				<h4>Available Badges for {{ $current_season }}</h4>
+
+				<div class="row badge-list">
 					@foreach ($season_badges_inactive as $badge)
 						<div class="col-xs-4 col-sm-3 equal-height">
 							<div class="badge-league inactive">

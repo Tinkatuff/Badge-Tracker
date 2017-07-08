@@ -58,12 +58,38 @@ class Challenger extends Model
 		return $this->badges()->where('season_id', $id)->get();
 	}
 
+	function eligibleBadges($season = null) {
+		if (is_null($season)) {
+			$season = Season::currentSeason();
+		} elseif (is_a($season, Season::class)) {
+			// do nothing
+		} else {
+			$season = $season->find($season);
+		}
+
+		$active_badges = $this->seasonBadges($season);
+		return $season->badges()->whereNotIn('id', $active_badges->pluck('id'))->get();
+	}
+
 	function seasonBadgeCount() {
 		return $this->badges()->where('season_id', Season::currentSeason()->id)->count();
 	}
 
 	function __toString() {
 		return $this->name;
+	}
+
+	function awardBadge(Badge $badge) {
+		if (!$this->badges->contains($badge)) {
+			$this->badges()->attach([
+				$badge->id => [
+					'awarded_by_id' => \Auth::user()->id,
+					'awarded_at' => \Carbon\Carbon::now()
+				]
+			]);
+		}
+		$this->current_season_badges = $this->seasonBadgeCount();
+		$this->save();
 	}
 
 	function syncBadges($badges, $detach = true) {

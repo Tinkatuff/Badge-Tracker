@@ -21,7 +21,7 @@ class ChallengerController extends Controller
 	function show(Challenger $challenger) {
 		$current_season = Season::currentSeason();
 		$active_badges = $challenger->seasonBadges($current_season);
-		$inactive_badges = $current_season->badges()->whereNotIn('id', $active_badges->pluck('id'))->get();
+		$inactive_badges = $challenger->eligibleBadges($current_season);
 
 		return view('challenger.show', [
 			'challenger' => $challenger,

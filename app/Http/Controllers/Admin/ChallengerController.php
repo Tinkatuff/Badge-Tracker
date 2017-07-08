@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Models\Challenger;
+use App\Models\Badge;
+use Carbon\Carbon;
 
 class ChallengerController extends Controller
 {
@@ -41,7 +43,19 @@ class ChallengerController extends Controller
 		return redirect()->route('challenger.show', $challenger)->with('message', 'Successfully updated challenger profile');
 	}
 
-	function delete() {
+	function award(Challenger $challenger) {
+		return view('challenger.award', ['challenger' => $challenger]);
+	}
+
+	function submitAward(Request $request, Challenger $challenger) {
+		$this->validate($request, [
+			'badge_id' => 'required|exists:badges,id',
+		]);
+
+		$badge = Badge::find($request->badge_id);
+
+		$challenger->awardBadge($badge);
 		
+		return redirect()->route('challenger.show', $challenger)->with('message', sprintf('Successfully awarded the %s', $badge));
 	}
 }
