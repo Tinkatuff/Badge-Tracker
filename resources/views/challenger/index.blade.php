@@ -2,6 +2,13 @@
 
 @section('page-title', 'Challenger Directory')
 
+@section('meta')
+	<meta property="og:title" content="Challenger listing for the Team Rocket AZ Pokemon League">
+	<meta property="og:image" content="{{ asset('images/facebook-preview.jpg') }}">
+	<meta property="og:site_name" content="TRAZ Pokemon League">
+	<meta property="og:description" content="Search and view the progress of challengers of the Team Rocket AZ Pokemon League based in the Phoenix, AZ metro area.">
+@stop
+
 @section('content')
 	<div class="container" id="challengers">
 		<div class="row">

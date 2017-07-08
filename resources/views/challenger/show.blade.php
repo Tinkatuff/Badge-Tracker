@@ -2,6 +2,13 @@
 
 @section('page-title', sprintf('%s | Challenger Profile', $challenger))
 
+@section('meta')
+	<meta property="og:title" content="{{ $challenger }}'s Challenger Profile">
+	<meta property="og:image" content="{{ asset('images/facebook-preview.jpg') }}">
+	<meta property="og:site_name" content="TRAZ Pokemon League">
+	<meta property="og:description" content="View {{ $challenger }}'s badges in the {{ $current_season }} of the Team Rocket AZ Pokemon League.">
+@stop
+
 @section('content')
 	<div class="container" id="challenger-profile">
 		<h1 class="subtitled">Challenger</h1>
