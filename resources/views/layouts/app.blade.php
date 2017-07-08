@@ -45,20 +45,25 @@
 				<li class="{{ App\class_if_route('active', 'challenger.*') }}">
 					<a href="{{ route('challenger.index') }}">Challengers</a>
 				</li>
+				@if (Auth::check() && Auth::user()->isAdmin())
+					<li class="{{ App\class_if_route('active', 'admin.challenger.create') }}">
+						<a href="{{ route('admin.challenger.create') }}"><i class="fa fa-plus"></i> New Challenger</a>
+					</li>
+				@endif
 			</ul>
 			
 			<div class="clearfix">
-				@if (Auth::check())
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="{{ route('logout') }}">Log Out</a>
-						</li>
-					</ul>
-				@endif
 				<a class="btn btn-facebook navbar-btn" href="https://www.facebook.com/groups/418038738406752" target="_blank">
 					<i class="fa fa-facebook" aria-title="Facebook" aria-hidden="true"></i>
 					Join <span class="visible-xs-inline">Facebook</span> Group
 				</a>
+				@if (Auth::check())
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="{{ route('logout') }}"><i class="fa fa-sign-out"></i> Log Out</a>
+						</li>
+					</ul>
+				@endif
 			</div>
 		</div><!-- /.navbar-collapse -->
 	</nav>

@@ -8,6 +8,10 @@ class Challenger extends Model
 {
 	protected $guarded = ['id'];
 
+	protected $dates = [ 
+		'created_at', 'updated_at', 'join_date'
+	];
+
 	function joined_season() {
 		return $this->belongsTo('App\Models\Season');
 	}

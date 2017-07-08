@@ -50,3 +50,30 @@ Route::get('/facebook/callback', [
 	'uses' => 'FacebookController@callback',
 	'as' => 'facebook.callback'
 ]);
+
+Route::group([
+	'as' => 'admin.',
+	'middleware' => 'auth',
+	'namespace' => 'Admin'
+], function() {
+
+	Route::get('/challengers/new', [
+		'uses' => 'ChallengerController@create',
+		'as' => 'challenger.create'
+	]);
+
+	Route::post('/challengers', [
+		'uses' => 'ChallengerController@store',
+		'as' => 'challenger.store'
+	]);
+		
+	Route::get('/challengers/{challenger}/edit', [
+		'uses' => 'ChallengerController@edit',
+		'as' => 'challenger.edit'
+	]);
+
+	Route::post('/challengers/{challenger}', [
+		'uses' => 'ChallengerController@update',
+		'as' => 'challenger.update'
+	]);
+});

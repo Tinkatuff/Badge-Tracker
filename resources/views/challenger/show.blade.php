@@ -7,6 +7,13 @@
 		<h1 class="subtitled">Challenger</h1>
 		<h2>{{ $challenger }}</h2>
 
+
+		@if (Auth::check() && Auth::user()->isAdmin())
+			<div class="actions">
+				<a class="btn btn-default" href="{{ route('admin.challenger.edit', $challenger) }}"><i class="fa fa-edit"></i> Edit Profile</a>
+			</div>
+		@endif
+
 		<div class="row">
 			<div class="col-md-8">
 
@@ -48,7 +55,7 @@
 						@endforeach
 						<div class="line">
 							<label>Joined</label>
-							<div class="data">{{ $challenger->join_date }}</div>
+							<div class="data">{{ $challenger->join_date->format('F j, Y') }}</div>
 						</div>
 
 
