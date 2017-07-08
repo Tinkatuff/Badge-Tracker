@@ -8,7 +8,7 @@
 		<h2>New Challenger</h2>
 
 		<div class="row">
-			<div class="col-md-8 col-md-push-1 col-lg-6 col-lg-push-2">
+			<div class="col-md-8 col-lg-6">
 				<form action="{{ route('admin.challenger.store') }}" method="post">
 					{{ csrf_field() }}
 
