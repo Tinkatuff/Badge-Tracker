@@ -16,15 +16,17 @@ class BadgesSeeder extends Seeder
 	public function run()
 	{
 		$types = Type::all();
-		$season = Season::currentSeason();
+		$seasons = Season::all();
 
 		foreach ($types as $type) {
-			Badge::create([
-				'type_id' => $type->id,
-				'name' => sprintf('%s Badge', $type),
-				'season_id' => $season->id,
-				'image' => sprintf('%s.png', strtolower($type))
-			]);
+			foreach ($seasons as $season) {
+				Badge::create([
+					'type_id' => $type->id,
+					'name' => sprintf('%s Badge', $type),
+					'season_id' => $season->id,
+					'image' => sprintf('%s.png', strtolower($type))
+				]);
+			}
 		}
 	}
 }
