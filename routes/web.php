@@ -21,7 +21,15 @@ Route::get('/', [
 Route::get('about', [
 	'as' => 'about',
 	'uses' => function() {
-		return view('about.about');
+		return redirect()->route('about.leaders');
+	}
+]);
+
+
+Route::get('about/leaders', [
+	'as' => 'about.leaders',
+	'uses' => function() {
+		return view('about.leaders');
 	}
 ]);
 

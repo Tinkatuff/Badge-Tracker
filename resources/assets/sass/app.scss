@@ -325,3 +325,70 @@ $tumblr: #35465C;
 		}
 	}
 }
+
+.leader-bios {
+	max-width: 810px;
+	margin: 0 auto;
+
+	.leader-bio {
+		@extend .clearfix;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 2em 0;
+
+
+		strong {
+			color: $brand-primary;
+		}
+
+		h2, h3 {
+			text-align: center;
+		}
+
+		h2:first-child {
+			margin: 0;
+		}
+
+		h2 + h3 {
+			margin-top: 7px;
+			margin-bottom: 1em;
+		}
+
+		img {
+			margin: 0 auto 1em;
+		}
+
+
+		@media (max-width: 499px) {
+			+ .leader-bio {
+				border-top: 1px solid $lt-gray;
+			}
+		}
+
+		@media (min-width: 500px) {
+			&:nth-child(odd) {
+				margin-left: 0;
+				h2, h3, ul, p {
+					text-align: left;
+				}
+
+				img {
+					float: left;
+					margin-right: 1em;
+				}
+			}
+
+			&:nth-child(even) {
+				margin-right: 0;
+				h2, h3, ul, p {
+					text-align: right;
+				}
+
+				img {
+					float: right;
+					margin-left: 1em;
+				}
+			}
+		}
+	}
+}
