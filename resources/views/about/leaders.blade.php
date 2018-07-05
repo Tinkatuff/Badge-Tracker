@@ -50,7 +50,7 @@
 					"What... Whคt... 山├┤丹丁 . 丹尺モ . 丫〇긴 . D〇工仈夕¿¿¿",
 					"`▄´ (()) █▄█ . ▄█▀ ╠╣ (()) █▄█ █▄ █)) █\█ '▀█▀ . █З █▓ . ╠╣ █▓ █▀▄ █▓",
 					"[̲̅e̲̅][̲̅r̲̅][̲̅r̲̅][̲̅o̲̅][̲̅r̲̅] fetching ⓜⓘⓢⓢⓘⓝⓖⓝⓞ",
-					"... Wow, sorry about that, I'm back! Okay. Check back later and we'll have more info for you."
+					"... Wow, sorry about that. I'm back! Okay. Check back later and we'll have more info for you."
 				];
 			@endphp
 			@foreach ($previews as $preview)
