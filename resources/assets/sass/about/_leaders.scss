@@ -31,6 +31,10 @@
 			h2 + h3 {
 				margin-bottom: 0;
 			}
+
+			p {
+				text-align: center;
+			}
 		}
 
 		img {
@@ -49,6 +53,11 @@
 		}
 
 		@media (min-width: 500px) {
+
+			&.unidentified p {
+				margin-top: 4em;
+			}
+
 			&:nth-child(odd) {
 				margin-left: 0;
 				h2, h3, ul, p {

@@ -58,7 +58,6 @@
 					<h2>???</h2>
 					<h3>Unidentified Gym Leader</h3>
 					<img class="img-responsive" src="{{ asset('images/leaders/missingno.png') }}" alt="???">
-					<br><br>
 					<p>{{ $preview }}</p>
 				</div>
 			@endforeach
