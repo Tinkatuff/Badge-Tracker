@@ -1,0 +1,153 @@
+
+
+h1 {
+	color: black;
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 0;
+
+	&.subtitled {
+
+		@media (min-width: 500px) {
+			float: left;
+			margin-right: 0.5em;
+		}
+
+		+ h2 {
+			color: $brand-primary;
+			margin-top: 0;
+		}
+	}
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 24px;
+}
+
+h3 {
+	color: #9B9B9B;
+	font-size: 20px;
+}
+
+small {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.navbar {
+	border: none;
+	border-bottom: 2px solid $brand-primary;
+	min-height: 62px;
+	text-transform: uppercase;
+	margin-bottom: 55px;
+	
+	.navbar-toggle {
+		padding-top: 13px;
+		padding-bottom: 13px;
+		background-color: #fff;
+
+		&:hover, &:active, &:focus {
+			.icon-bar {
+					background-color: $brand-primary;
+			}
+			background-color: #fff;
+		}
+	}
+
+	.navbar-nav > li > a, {
+		padding-top: 19px;
+		padding-bottom: 19px;
+	}
+
+	.navbar-btn {
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.btn-facebook {
+			float: right;
+		}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		margin-bottom: 30px;
+
+		.navbar-btn {
+			margin-top: 0;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			text-align: left;
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+.navbar-brand {
+	padding: 0 20px 0 10px;
+
+	&, > img {
+		height: 60px;
+	}
+}
+
+footer {
+	padding: 3em 1em 1em;
+	text-align: center;
+	font-size: 12px;
+	margin-top: 3em;
+}
+
+.btn-facebook {
+	background-color: $facebook-blue;
+	border: 1px solid #2A457F;
+	color: #fff;
+
+	&:hover, &:focus, &:active {
+		background-color: lighten($facebook-blue, 5%);
+		border-color: $facebook-blue;
+		color: #fff;
+	}
+
+	.fa-facebook {
+		margin-right: 0.5em;
+	}
+}
+
+$facebook: #3B5998;
+$twitter: #4099FF;
+$tumblr: #35465C;
+
+.social-media {
+	i.fa {
+		font-size: 30px;
+		margin-right: 0.2em;
+		transition: color 0.3s;
+
+		&.fa-facebook-square, &.fa-facebook, &.fa-facebook-official {
+			color: $facebook;
+			&:hover {
+				color: lighten($facebook, 10%);
+			}
+		}
+
+		&.fa-tumblr-square, &.fa-tumblr {
+			color: $tumblr;
+			&:hover {
+				color: lighten($tumblr, 10%);
+			}
+		}
+
+		&.fa-twitter-square, &.fa-twitter {
+			color: $twitter;
+			&:hover {
+				color: lighten($twitter, 10%);
+			}
+		}
+	}
+}

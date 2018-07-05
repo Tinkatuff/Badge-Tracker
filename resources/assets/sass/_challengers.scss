@@ -1,0 +1,166 @@
+
+#challengers {
+	h1 {
+		line-height: 36px;
+	}
+}
+
+.key {
+	max-width: 200px;
+	border: 1px solid $lt-gray;
+	padding: 0.5em;
+	margin: 0.5em 0 0.5em auto;
+}
+
+.stats-icon {
+	vertical-align: middle;
+	display: inline-block;
+	color: $brand-primary;
+	font-size: 16px;
+	padding-right: 0.25em;
+}
+
+ol.challenger-list {
+	list-style: none;
+	margin: 1em 0;
+	padding: 0;
+
+	@include clearfix;
+
+	li.challenger > a {
+		position: relative;
+		display: block;
+		height: 55px;
+		padding: 5px 10px;
+		color: inherit;
+		border-bottom: 1px solid $lt-gray;
+
+		&:hover {
+			background-color: $near-white;
+			cursor: pointer;
+		}
+
+		&, * {
+			line-height: 45px;
+		}
+	}
+
+	h2.name {
+		margin: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		margin-right: 140px;
+	}
+
+	.stats {
+		width: 140px;
+		font-size: 12px;
+		padding: 5px 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		> span {
+			display: inline-block;
+
+			+ span {
+				margin-left: 1em;
+			}
+
+			i {
+				@extend .stats-icon;
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	ol.challenger-list {
+		.stats {
+			.since {
+				display: none;
+			}
+			width: 50px;
+		}
+
+		h2.name {
+			margin-right: 50px;
+		}
+	}
+
+	.key .since {
+		display: none;
+	}
+}
+
+#challenger-profile {
+	> .row {
+		margin-top: 2em;
+		h3 {
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.badge-list {
+	.badge-league {
+		text-align: center;
+		max-width: 130px;
+
+		.well {
+			margin-bottom: 0;
+			background-color: $near-white;
+			padding: 5px;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		.badge-name {
+			font-size: 10px;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 5px 0 30px;
+		}
+
+		&.inactive {
+			filter: grayscale(100%);
+			color: $lt-gray;
+
+			img {
+				opacity: 0.3;
+			}
+		}
+	}
+}
+
+.challenger-info {
+	.since {
+		@extend small;
+		color: $brand-primary;
+		margin-bottom: 2em;
+	}
+
+	.line {
+		border: 1px solid $lt-gray;
+		border-width: 1px 0;
+		padding: 5px 0;
+		@extend .clearfix;
+
+		+ .line {
+			border-top-width: 0;
+		}
+		
+		label, .data {
+			@extend .col-xs-6;
+			margin: 0;
+		}
+	}
+
+	.social-media {
+		margin-top: 1em;
+	}
+}
