@@ -45,9 +45,9 @@
 				<li class="{{ App\class_if_route('active', 'challenger.*') }}">
 					<a href="{{ route('challenger.index') }}">Challengers</a>
 				</li>
-				<li class="{{ App\class_if_route('active', 'about.leaders') }}">
+				{{-- <li class="{{ App\class_if_route('active', 'about.leaders') }}">
 					<a href="{{ route('about.leaders') }}">Gym Leaders</a>
-				</li>
+				</li> --}}
 				@if (Auth::check() && Auth::user()->isAdmin())
 					<li class="{{ App\class_if_route('active', 'admin.challenger.create') }}">
 						<a href="{{ route('admin.challenger.create') }}"><i class="fa fa-plus"></i> New Challenger</a>
