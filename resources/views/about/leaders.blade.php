@@ -12,7 +12,7 @@
 				<h2>Ace</h2>
 				<h3>An unlucky gambler</h3>
 
-				<img class="img-responsive" src="{{ asset('images/leaders/ace.jpg') }}" width="200" height="302" alt="Photo of Ace">
+				<img class="img-responsive" src="{{ asset('images/leaders/ace-optimized.jpg') }}" width="200" height="302" alt="Photo of Ace">
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Dark</li>
@@ -28,7 +28,7 @@
 				<h2>Professor Plum</h2>
 				<h3>A professional toxicologist</h3>
 
-				<img class="img-responsive" src="{{ asset('images/leaders/professor-plum.jpg') }}" width="200" height="302" alt="Photo of Professor Plum">
+				<img class="img-responsive" src="{{ asset('images/leaders/professor-plum-optimized.jpg') }}" width="200" height="302" alt="Photo of Professor Plum">
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Poison</li>
