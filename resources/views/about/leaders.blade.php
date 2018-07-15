@@ -12,7 +12,7 @@
 				<h2>Ace</h2>
 				<h3>An unlucky gambler</h3>
 
-				<img class="img-responsive" src="{{ asset('images/leaders/ace-optimized.jpg') }}" width="200" height="302" alt="Photo of Ace">
+				<img class="img-responsive" src="{{ asset('images/leaders/ace.jpg') }}" width="200" alt="Photo of Ace">
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Dark</li>
@@ -28,8 +28,8 @@
 				<h2>Professor Plum</h2>
 				<h3>A professional toxicologist</h3>
 
-				<img class="img-responsive" src="{{ asset('images/leaders/professor-plum-optimized.jpg') }}" width="200" height="302" alt="Photo of Professor Plum">
-
+				<img class="img-responsive" src="{{ asset('images/leaders/professor-plum.jpg') }}" width="200" alt="Photo of Professor Plum">
+				
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Poison</li>
 					<li><strong>Signature Pokemon:</strong> Crobat, Amoongus</li>
@@ -39,14 +39,42 @@
 				<p>One of the founders of the TRAZ league. Years of working with toxic chemicals have made him a bit eccentric, but that hasn’t changed his battling skill. Defeat him for the Toxicology Badge, and a grade on your creativity and performance.</p>
 			</div>
 
+			<div class="leader-bio">
+				<h2>Kayn Coldsteel</h2>
+				<h3>An iron-hearted vigilante</h3>
+
+				<img class="img-responsive" src="{{ asset('images/leaders/kayn-coldsteel.jpg') }}" width="200" alt="Photo of Kayn Coldsteel">
+
+				<ul class="list-unstyled">
+					<li><strong>Type:</strong> Steel</li>
+					<li><strong>Signature Pokemon:</strong> Aegislash, Bisharp</li>
+					<li><strong>Favorite Band:</strong> Three Days Grace</li>
+				</ul>
+				
+				<p>Everyone loves a good anti-hero, and Kayn is about as edgy and brooding as they come. He constantly seeks out strong opponents to battle for the chance to improve his skills as a trainer. Battle his team of titanic Pokémon and see if you have what it takes to earn the Edge Badge.</p>
+			</div>
+
+
+			<div class="leader-bio">
+				<h2>Priest Solbrann</h2>
+				<h3>A fiery fanatic</h3>
+
+				<img class="img-responsive" src="{{ asset('images/leaders/priest-solbrann.jpg') }}" width="200" alt="Photo of Priest Solbrann">
+
+				<ul class="list-unstyled">
+					<li><strong>Type:</strong> Fire</li>
+					<li><strong>Signature Pokemon:</strong> Torkoal, Volcarona</li>
+					<li><strong>Preferred Light Source:</strong> The Sun</li>
+				</ul>
+				
+				<p>Priest Solbrann has come from a faraway region to spread the light of the Sun. He spent a good portion of his youth staring at it, without being rendered blind to its image. After learning different ways that fire can burn, perhaps you can stand a chance at earning the Solar Badge.</p>
+			</div>
 
 			@php
 				$previews = [
 					"Huh... We don't have any info on this gym leader yet. I suggest you check back later.",
-					"I'm not kidding. We don't know more yet. These guys (and gals  ... and... whatever else they may be) are elusive!",
-					"I hope you're not still scrolling down hoping to learn more.",
-					"Umm...",
-					"... &hellip; ..... .............. &hellip;",
+					"Umm... Yep. That's all we've got.",
+					"... &hellip; ..... .............. &hellip; Why.. Are you still here?",
 					"What... Whคt... 山├┤丹丁 . 丹尺モ . 丫〇긴 . D〇工仈夕¿¿¿",
 					"`▄´ (()) █▄█ . ▄█▀ ╠╣ (()) █▄█ █▄ █)) █\█ '▀█▀ . █З █▓ . ╠╣ █▓ █▀▄ █▓",
 					"[̲̅e̲̅][̲̅r̲̅][̲̅r̲̅][̲̅o̲̅][̲̅r̲̅] fetching ⓜⓘⓢⓢⓘⓝⓖⓝⓞ",
