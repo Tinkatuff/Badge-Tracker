@@ -92,7 +92,7 @@
 				<h2>Dagor Bragollach</h2>
 				<h3>A draconian capitalist</h3>
 
-				<img class="img-responsive" src="{{ asset('images/leaders/dagor-bragollach.jpg') }}" width="200" alt="Photo of Priest Solbrann">
+				<img class="img-responsive" src="{{ asset('images/leaders/dagor-bragollach.jpg') }}" width="300" alt="Photo of Priest Solbrann">
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Dragon</li>
@@ -106,8 +106,6 @@
 			@php
 				$previews = [
 					"Huh... We don't have any info on this gym leader yet. I suggest you check back later.",
-					"Umm... Yep. That's all we've got.",
-					"... &hellip; ..... .............. &hellip; Why.. Are you still here?",
 					"What... Whคt... 山├┤丹丁 . 丹尺モ . 丫〇긴 . D〇工仈夕¿¿¿",
 					"`▄´ (()) █▄█ . ▄█▀ ╠╣ (()) █▄█ █▄ █)) █\█ '▀█▀ . █З █▓ . ╠╣ █▓ █▀▄ █▓",
 					"[̲̅e̲̅][̲̅r̲̅][̲̅r̲̅][̲̅o̲̅][̲̅r̲̅] fetching ⓜⓘⓢⓢⓘⓝⓖⓝⓞ",
