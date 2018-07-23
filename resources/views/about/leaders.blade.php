@@ -69,6 +69,39 @@
 				
 				<p>Priest Solbrann has come from a faraway region to spread the light of the Sun. He spent a good portion of his youth staring at it, without being rendered blind to its image. After learning different ways that fire can burn, perhaps you can stand a chance at earning the Solar Badge.</p>
 			</div>
+			
+			
+			<div class="leader-bio">
+				<h2>Joe Jitsu</h2>
+				<h3>A fighting game enthusiast</h3>
+
+				<img class="img-responsive" src="{{ asset('images/leaders/joe-jitsu.jpg') }}" width="200" alt="Photo of Kayn Coldsteel">
+
+				<ul class="list-unstyled">
+					<li><strong>Type:</strong> Fighting</li>
+					<li><strong>Signature Pokemon:</strong> Lucario, Scrafty</li>
+					<li><strong> Assist Style:</strong> Direct Tilt-Up</li>
+				</ul>
+				
+				<p>Raised in the arcade, Joe Jitsu brings his unique gaming skills to his Pokémon battling style. His competitive nature suits him well as a gym leader, even while he’s calling out command inputs instead of moves. If you think you can beat his Shoryuken you’ll earn yourself a Scuffle Badge.
+				</p>
+			</div>
+
+
+			<div class="leader-bio">
+				<h2>Dagor Bragollach</h2>
+				<h3>A draconian capitalist</h3>
+
+				<img class="img-responsive" src="{{ asset('images/leaders/dagor-bragollach.jpg') }}" width="200" alt="Photo of Priest Solbrann">
+
+				<ul class="list-unstyled">
+					<li><strong>Type:</strong> Dragon</li>
+					<li><strong>Signature Pokemon:</strong> Salamence, Dragonite</li>
+					<li><strong>Favorite Thing:</strong> Money</li>
+				</ul>
+				
+				<p>Dagor is a successful entrepreneur, who decided that investing in a Pokemon league is a sound business decision. Instead of only fighting against him, you’ll need to also fight two of his allies or—worse—two of your friends in a Battle Royal. Prove your greed is the strongest to claim the Avarice Badge.</p>
+			</div>
 
 			@php
 				$previews = [
