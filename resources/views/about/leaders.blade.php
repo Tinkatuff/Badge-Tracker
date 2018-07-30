@@ -106,7 +106,7 @@
 				<h2>Mr. Grimwald</h2>
 				<h3>A melancholy cashier</h3>
 
-				<img class="img-responsive" src="{{ asset('images/leaders/Mr-Grimwald.jpg') }}" width="200" alt="Photo of Mr. Grimwald">
+				<img class="img-responsive" src="{{ asset('images/leaders/mr-grimwald.jpg') }}" width="200" alt="Photo of Mr. Grimwald">
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Ghost</li>
