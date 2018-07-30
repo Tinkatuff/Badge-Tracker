@@ -87,7 +87,6 @@
 				</p>
 			</div>
 
-
 			<div class="leader-bio">
 				<h2>Dagor Bragollach</h2>
 				<h3>A draconian capitalist</h3>
@@ -103,11 +102,39 @@
 				<p>Dagor is a successful entrepreneur, who decided that investing in a Pokemon league is a sound business decision. Instead of only fighting against him, you’ll need to also fight two of his allies or—worse—two of your friends in a Battle Royal. Prove your greed is the strongest to claim the Avarice Badge.</p>
 			</div>
 
+			<div class="leader-bio">
+				<h2>Mr. Grimwald</h2>
+				<h3>A melancholy cashier</h3>
+
+				<img class="img-responsive" src="{{ asset('images/leaders/Mr-Grimwald.jpg') }}" width="200" alt="Photo of Priest Solbrann">
+
+				<ul class="list-unstyled">
+					<li><strong>Type:</strong> Ghost</li>
+					<li><strong>Signature Pokemon:</strong> Gengar, Dusclops</li>
+					<li><strong>Price matching options:</strong> None</li>
+				</ul>
+				
+				<p>Mr. Grimwald has a special connection to ghost types, as his retail job leaves him dead inside. He can only come to league events that don’t conflict with his overtime shifts at the Thrifty Megamart. Best his team to check out with the Paranormal Badge.</p>
+			</div>
+
+			<div class="leader-bio">
+				<h2>Feathers Ruffleston</h2>
+				<h3>A... penguin?</h3>
+
+				<img class="img-responsive" src="{{ asset('images/leaders/feathers-ruffleston.jpg') }}" width="200" alt="Photo of Priest Solbrann">
+
+				<ul class="list-unstyled">
+					<li><strong>Type:</strong> Ice</li>
+					<li><strong>Signature Pokemon:</strong> Alolan Ninetales, Alolan Sandslash</li>
+					<li><strong>Favorite Snack:</strong> Sardines</li>
+				</ul>
+				
+				<p>Since escaping the local zoo, Ruffleston has proven himself to be an extremely capable battler. Disregarding the legality of having a penguin as a gym leader, he’s too adorable to give up. Put his team on ice to be rewarded by the Sardine Badge.</p>
+			</div>
+
 			@php
 				$previews = [
 					"Huh... We don't have any info on this gym leader yet. I suggest you check back later.",
-					"What... Whคt... 山├┤丹丁 . 丹尺モ . 丫〇긴 . D〇工仈夕¿¿¿",
-					"`▄´ (()) █▄█ . ▄█▀ ╠╣ (()) █▄█ █▄ █)) █\█ '▀█▀ . █З █▓ . ╠╣ █▓ █▀▄ █▓",
 					"[̲̅e̲̅][̲̅r̲̅][̲̅r̲̅][̲̅o̲̅][̲̅r̲̅] fetching ⓜⓘⓢⓢⓘⓝⓖⓝⓞ",
 					"... Wow, sorry about that. I'm back! Okay. Check back later and we'll have more info for you."
 				];

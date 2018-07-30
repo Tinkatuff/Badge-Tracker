@@ -25,6 +25,12 @@ Route::get('about', [
 	}
 ]);
 
+Route::get('about/rules', [
+	'as' => 'about.rules',
+	'uses' => function() {
+		return view('about.rules');
+	}
+]);
 
 Route::get('about/leaders', [
 	'as' => 'about.leaders',
