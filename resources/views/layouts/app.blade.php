@@ -80,7 +80,7 @@
 
 @section('footer')
 	<footer>
-		The Team Rocket AZ Pokemon League is a fan-run challenge hosted in the Phoenix, AZ metro area.
+		The Team Rocket AZ Pok&eacute;mon League is a fan-run challenge hosted in the Phoenix, AZ metro area.
 		Visit our <a href="https://www.facebook.com/TeamRocketAZ">Facebook Page</a> for more info!
 	</footer>
 @stop

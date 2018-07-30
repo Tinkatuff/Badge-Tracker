@@ -5,8 +5,8 @@
 @section('meta')
 	<meta property="og:title" content="{{ $challenger }}'s Challenger Profile">
 	<meta property="og:image" content="{{ asset('images/facebook-preview.jpg') }}">
-	<meta property="og:site_name" content="TRAZ Pokemon League">
-	<meta property="og:description" content="View {{ $challenger }}'s badges in the {{ $current_season }} of the Team Rocket AZ Pokemon League.">
+	<meta property="og:site_name" content="TRAZ Pokémon League">
+	<meta property="og:description" content="View {{ $challenger }}'s badges in the {{ $current_season }} of the Team Rocket AZ Pokémon League.">
 @stop
 
 @section('content')

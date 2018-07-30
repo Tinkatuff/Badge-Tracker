@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'About The League')
+@section('page-title', 'League Rules')
 
 @section('content')
 	<div class="container">
@@ -16,19 +16,19 @@
 				<h2 id="general-rules">General Rules</h2>
 
 				<h3>Teams and battle format</h3>
-				<p>Battles are done with teams of 6 pokemon. The challenged gym leader will determine the battle format (e.g. Single Battle, Double Battle, etc)</p>
+				<p>Battles are done with teams of 6 Pok&eacute;mon. The challenged gym leader will determine the battle format (e.g. Single Battle, Double Battle, etc) and any special format rules.</p>
 				
 				<h3>Legality</h3>
-				<p>All pokemon must have legally available moves, items, and abilities available through normal game mechanics. As examples, Flareon can not learn Fly, the Fire Gem is not available in-game, and Magikarp can not have the Wonder Guard ability.</p>
+				<p>All Pok&eacute;mon must have legally available moves, items, and abilities available through normal game mechanics. As examples, Flareon can not learn Fly, the Fire Gem is not available in-game, and Magikarp can not have the Wonder Guard ability.</p>
 				
-				<h3>Pokemon clause</h3>
-				<p>No repeat pokemon. Alolan forms are considered different than their non-alolan counterparts.</p>
+				<h3>Pok&eacute;mon clause</h3>
+				<p>No repeat Pok&eacute;mon. Alolan forms are considered different than their non-alolan counterparts.</p>
 				
 				<h3>Item clause</h3>
-				<p>Multiple pokemon cannot be holding the same exact item. Two pokemon with leftovers is not acceptable, but two with different types of z-crystals is acceptable.</p>
+				<p>Multiple Pok&eacute;mon cannot be holding the same exact item. Two Pok&eacute;mon with leftovers is not acceptable, but two with different types of z-crystals is acceptable.</p>
 				
 				<h3>Sleep clause</h3>
-				<p>You can only put one enemy pokemon to sleep at a time, even if one of those sleeping pokemon has been switched out.</p>
+				<p>You can only put one enemy Pok&eacute;mon to sleep at a time, even if one of those sleeping Pok&eacute;mon has been switched out.</p>
 				
 				<h3>No 1-Hit KO moves</h3>
 				<p>You cannot have Guillotine, Fissure, Sheer Cold, or Horn Drill.</p>
@@ -36,8 +36,8 @@
 				<h3>Evasion clause</h3>
 				<p>No direct evasion increasing moves can be used, which only applies to Minimize and Double Team. Indirect effects are allowed, such as certain abilities such as Moody, items such as bright powder, or the random chance of Acupuncture.</p>
 				
-				<h3>Banned Pokemon</h3>
-				<p>Pokemon that cannot be used in the Super Battle Tree cannot be used. They are as follows:</p>
+				<h3>Banned Pok&eacute;mon</h3>
+				<p>Pok&eacute;mon that cannot be used in the Super Battle Tree cannot be used. They are as follows:</p>
 		
 				@php
 					$unallowed = [
@@ -122,13 +122,13 @@
 				<h2 id="gym-trainer-rules">Gym Trainer Rules</h2>
 				<p>A challenger may decide to represent a gym leader or type and earn points for that type through the tournament. All general rules still apply to these matches, but with the following caveats:</p>
 				<h3>Typing</h3>
-				<p>All pokemon used must be of your gym's typing as it enters the field, without the use of an item.</p>
+				<p>All Pok&eacute;mon used must be of your gym's typing as it enters the field, without the use of an item.</p>
 				<h3>Megas</h3>
-				<p>All pokemon used must be of your gym's typing before mega evolving.</p>
+				<p>All Pok&eacute;mon used must be of your gym's typing before mega evolving.</p>
 				<h3>Z-Crystals</h3>
 				<p>Initially, only the z-crystal you can use is that of your type. As you earn gym points, you unlock the z-crystals of the Gym Leaders you have defeated.</p>
 				<h3>Signature Z-Crystals</h3>
-				<p>An exception to the above rule is when a pokemon in use with two types has a signature z-move. As examples, a ghost-type Gym Trainer can use a Mimikyu with Mimikium-Z, even though Let's Snuggle Forever is a fairy-type move. A fire-type Gym Trainer can use an Incineroar with Incinium-Z, even though Malicious Moonsault is a dark-type move. Ditto and Smeargle can only use such Z-Crystals if the Gym Leader of the crystal's type has been defeated.</p>
+				<p>An exception to the above rule is when a Pok&eacute;mon in use with two types has a signature z-move. As examples, a ghost-type Gym Trainer can use a Mimikyu with Mimikium-Z, even though Let's Snuggle Forever is a fairy-type move. A fire-type Gym Trainer can use an Incineroar with Incinium-Z, even though Malicious Moonsault is a dark-type move. Ditto and Smeargle can only use such Z-Crystals if the Gym Leader of the crystal's type has been defeated.</p>
 				<h3>Points and Badges</h3>
 				<p>You can use a Gym Trainer team that follows the above rules to earn a badge and a gym point in one battle; or you can use a different team to earn the badge but not the gym point.</p>
 		

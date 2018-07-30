@@ -16,7 +16,7 @@
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Dark</li>
-					<li><strong>Signature Pokemon:</strong> Absol, Alolan Persian</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Absol, Alolan Persian</li>
 					<li><strong>Lucky Number:</strong> 3</li>
 				</ul>
 				
@@ -32,7 +32,7 @@
 				
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Poison</li>
-					<li><strong>Signature Pokemon:</strong> Crobat, Amoongus</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Crobat, Amoongus</li>
 					<li><strong>Favorite Candy:</strong> Kit Kat bars</li>
 				</ul>
 				
@@ -47,7 +47,7 @@
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Steel</li>
-					<li><strong>Signature Pokemon:</strong> Aegislash, Bisharp</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Aegislash, Bisharp</li>
 					<li><strong>Favorite Band:</strong> Three Days Grace</li>
 				</ul>
 				
@@ -63,7 +63,7 @@
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Fire</li>
-					<li><strong>Signature Pokemon:</strong> Torkoal, Volcarona</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Torkoal, Volcarona</li>
 					<li><strong>Preferred Light Source:</strong> The Sun</li>
 				</ul>
 				
@@ -75,11 +75,11 @@
 				<h2>Joe Jitsu</h2>
 				<h3>A fighting game enthusiast</h3>
 
-				<img class="img-responsive" src="{{ asset('images/leaders/joe-jitsu.jpg') }}" width="200" alt="Photo of Kayn Coldsteel">
+				<img class="img-responsive" src="{{ asset('images/leaders/joe-jitsu.jpg') }}" width="200" alt="Photo of Joe Jitsu">
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Fighting</li>
-					<li><strong>Signature Pokemon:</strong> Lucario, Scrafty</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Lucario, Scrafty</li>
 					<li><strong> Assist Style:</strong> Direct Tilt-Up</li>
 				</ul>
 				
@@ -91,26 +91,26 @@
 				<h2>Dagor Bragollach</h2>
 				<h3>A draconian capitalist</h3>
 
-				<img class="img-responsive" src="{{ asset('images/leaders/dagor-bragollach.jpg') }}" width="300" alt="Photo of Priest Solbrann">
+				<img class="img-responsive" src="{{ asset('images/leaders/dagor-bragollach.jpg') }}" width="300" alt="Photo of Dagor Bragollach">
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Dragon</li>
-					<li><strong>Signature Pokemon:</strong> Salamence, Dragonite</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Salamence, Dragonite</li>
 					<li><strong>Favorite Thing:</strong> Money</li>
 				</ul>
 				
-				<p>Dagor is a successful entrepreneur, who decided that investing in a Pokemon league is a sound business decision. Instead of only fighting against him, you’ll need to also fight two of his allies or—worse—two of your friends in a Battle Royal. Prove your greed is the strongest to claim the Avarice Badge.</p>
+				<p>Dagor is a successful entrepreneur, who decided that investing in a Pok&eacute;mon league is a sound business decision. Instead of only fighting against him, you’ll need to also fight two of his allies or—worse—two of your friends in a Battle Royal. Prove your greed is the strongest to claim the Avarice Badge.</p>
 			</div>
 
 			<div class="leader-bio">
 				<h2>Mr. Grimwald</h2>
 				<h3>A melancholy cashier</h3>
 
-				<img class="img-responsive" src="{{ asset('images/leaders/Mr-Grimwald.jpg') }}" width="200" alt="Photo of Priest Solbrann">
+				<img class="img-responsive" src="{{ asset('images/leaders/Mr-Grimwald.jpg') }}" width="200" alt="Photo of Mr. Grimwald">
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Ghost</li>
-					<li><strong>Signature Pokemon:</strong> Gengar, Dusclops</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Gengar, Dusclops</li>
 					<li><strong>Price matching options:</strong> None</li>
 				</ul>
 				
@@ -121,11 +121,11 @@
 				<h2>Feathers Ruffleston</h2>
 				<h3>A... penguin?</h3>
 
-				<img class="img-responsive" src="{{ asset('images/leaders/feathers-ruffleston.jpg') }}" width="200" alt="Photo of Priest Solbrann">
+				<img class="img-responsive" src="{{ asset('images/leaders/feathers-ruffleston.jpg') }}" width="200" alt="Photo of Feathers Ruffleston">
 
 				<ul class="list-unstyled">
 					<li><strong>Type:</strong> Ice</li>
-					<li><strong>Signature Pokemon:</strong> Alolan Ninetales, Alolan Sandslash</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Alolan Ninetales, Alolan Sandslash</li>
 					<li><strong>Favorite Snack:</strong> Sardines</li>
 				</ul>
 				
