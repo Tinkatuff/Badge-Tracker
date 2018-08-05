@@ -132,9 +132,23 @@
 				<p>Since escaping the local zoo, Ruffleston has proven himself to be an extremely capable battler. Disregarding the legality of having a penguin as a gym leader, he’s too adorable to give up. Put his team on ice to be rewarded by the Sardine Badge.</p>
 			</div>
 
+			<div class="leader-bio">
+				<h2>Bellatrix Stella</h2>
+				<h3>Astral Seer</h3>
+
+				<img class="img-responsive" src="{{ asset('images/leaders/bellatrix-stella.jpg') }}" width="200" alt="Photo of Bellatrix Stella">
+
+				<ul class="list-unstyled">
+					<li><strong>Type:</strong> Psychic</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Starmie, Eclipseon</li>
+					<li><strong>Favorite Scientific Study:</strong> Astrology</li>
+				</ul>
+				
+				<p>Bellatrix was born from the stars, as they produce all elements necessary for life, and thus has an enhanced connection to her astral soul. The stars foretell all things, and whispered through the night sky that this league is a central point in the great constellation of her interstellar journey. If the heavens so decree, you will receive from her the Stars Badge.</p>
+			</div>
+
 			@php
 				$previews = [
-					"Huh... We don't have any info on this gym leader yet. I suggest you check back later.",
 					"[̲̅e̲̅][̲̅r̲̅][̲̅r̲̅][̲̅o̲̅][̲̅r̲̅] fetching ⓜⓘⓢⓢⓘⓝⓖⓝⓞ",
 					"... Wow, sorry about that. I'm back! Okay. Check back later and we'll have more info for you."
 				];
