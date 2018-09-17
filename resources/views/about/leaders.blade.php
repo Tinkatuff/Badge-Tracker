@@ -169,8 +169,8 @@
 				<img class="img-responsive" src="{{ asset('images/leaders/sergeant-verde.jpg') }}" width="200" alt="Photo of Sergeant Verde">
 
 				<ul class="list-unstyled">
-					<li><strong>Type:</strong> Bug</li>
-					<li><strong>Signature Pok&eacute;mon:</strong> Heracross, Vivillon</li>
+					<li><strong>Type:</strong> Grass</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Cradily, Gourgeist</li>
 					<li><strong>Favorite Drink:</strong> Cacturne Juice</li>
 				</ul>
 				
