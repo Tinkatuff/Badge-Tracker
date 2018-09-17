@@ -147,7 +147,52 @@
 				<p>Bellatrix was born from the stars, as they produce all elements necessary for life, and thus has an enhanced connection to her astral soul. The stars foretell all things, and whispered through the night sky that this league is a central point in the great constellation of her interstellar journey. If the heavens so decree, you will receive from her the Stars Badge.</p>
 			</div>
 
-			@php
+			<div class="leader-bio">
+				<h2>Professor Crawly</h2>
+				<h3>Pokemon Entomologist</h3>
+
+				<img class="img-responsive" src="{{ asset('images/leaders/professor-crawly.jpg') }}" width="200" alt="Photo of Professor Crawly">
+
+				<ul class="list-unstyled">
+					<li><strong>Type:</strong> Bug</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Heracross, Vivillon</li>
+					<li><strong>Favorite Suborder:</strong> Rhopalocera</li>
+				</ul>
+				
+				<p>Originally from the Sevii Islands, Professor Crawly is a former colleague of Professor Plum. After turning down invitations from Plum for years, he finally has the time and ability to join the TRAZ Pokemon League. Defeat him to earn the Insecta Badge, modeled after his original work on Caterpie.</p>
+			</div>
+
+			<div class="leader-bio">
+				<h2>Sergeant Verde</h2>
+				<h3>A Verdant Veteran</h3>
+
+				<img class="img-responsive" src="{{ asset('images/leaders/sergeant-verde.jpg') }}" width="200" alt="Photo of Sergeant Verde">
+
+				<ul class="list-unstyled">
+					<li><strong>Type:</strong> Bug</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Heracross, Vivillon</li>
+					<li><strong>Favorite Drink:</strong> Cacturne Juice</li>
+				</ul>
+				
+				<p>Sergeant Verde’s loyalty to grass types stems from his time in the war, when a group of them saved him when he got lost getting to the mess hall. In his own words, pokemon spans many generations, and it is essential to learn where it has started, to master what it has become, and to prepare for what it might be. Thus, battling him will teach you about the history of war, and is how you can earn the Roots Badge.</p>
+			</div>
+
+			<div class="leader-bio">
+				<h2>Amoré</h2>
+				<h3>Humanity’s Biggest Star™</h3>
+
+				<img class="img-responsive" src="{{ asset('images/leaders/amore.jpg') }}" width="200" alt="Photo of Amoré">
+
+				<ul class="list-unstyled">
+					<li><strong>Type:</strong> Fairy</li>
+					<li><strong>Signature Pok&eacute;mon:</strong> Primarina, Gardevoir</li>
+					<li><strong>Current Follower Count:</strong> On the decline after his last film flopped</li>
+				</ul>
+				
+				<p>Amoré was on set when he heard news of a nearby Pokémon league, and decided he couldn't just be a popular movie star. He had to be the most popular gym leader in it as well! Massage his ego a bit by taking a selfie with him, and he'll review your stage presence during a single or double battle (along with a chance for the Spotlight Badge!)</p>
+			</div>
+
+			{{-- @php
 				$previews = [
 					"[̲̅e̲̅][̲̅r̲̅][̲̅r̲̅][̲̅o̲̅][̲̅r̲̅] fetching ⓜⓘⓢⓢⓘⓝⓖⓝⓞ",
 					"... Wow, sorry about that. I'm back! Okay. Check back later and we'll have more info for you."
@@ -160,7 +205,7 @@
 					<img class="img-responsive" src="{{ asset('images/leaders/missingno.png') }}" alt="???">
 					<p>{{ $preview }}</p>
 				</div>
-			@endforeach
+			@endforeach --}}
 
 		</div>
 	</div>
