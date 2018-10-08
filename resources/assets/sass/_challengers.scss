@@ -78,7 +78,15 @@ ol.challenger-list {
 @media (max-width: 400px) {
 	ol.challenger-list {
 		.stats {
-			width: 50px;
+			width: 70px;
+
+			> span + span {
+				margin-left: 5px;
+			}
+		}
+
+		.badges-total, .trainer-type-text {
+			display: none;
 		}
 
 		h2.name {

@@ -45,12 +45,12 @@
 								<div class="stats">
 									<span class="badges">
 										<i class="fa fa-shield-alt" aria-hidden="true" title="5 of 18 Badges Won"></i>
-										{{ $challenger->current_season_badges }} / {{ $season_badges }}
+										{{ $challenger->current_season_badges }} <span class="badges-total">/ {{ $season_badges }}</span>
 									</span>
 									@if ($challenger->type)
-										<span class="type" title="{{ $challenger->type }} Type Trainer">
+										<span class="trainer-type" title="{{ $challenger->type }} Type Trainer">
 											<i class="{{ $challenger->type->icon  }} fa-fw" aria-hidden="true"></i>
-											{{ $challenger->type }}
+											<span class="trainer-type-text">{{ $challenger->type }}</span>
 										</span>
 									@endif
 								</div>
