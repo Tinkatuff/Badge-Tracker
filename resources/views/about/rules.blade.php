@@ -135,7 +135,7 @@
 				<hr>
 		
 				<h2 id="tournament-rules">Challengers' Tournament Rules</h2>
-				<p>For the finale of a season, a tournament between league challengers take place. During this tournament, all General Rules must be followed. The tournament is single-elimination, 6 vs 6 single battles. Placement within the bracket is determined by number of badges earned, and at least one badge is required to enter. Each challenger must use a single team through the entire tournament.</p>
+				<p>For the finale of a season, a tournament between league challengers take place. The tournament will take place in the Ultra Sun or Ultra Moon versions. During this tournament, all General Rules must be followed. The tournament is single-elimination, 6 vs 6 single battles. Placement within the bracket is determined by number of badges earned, and at least one badge is required to enter. Each challenger must use a single team through the entire tournament.</p>
 		
 			</div>
 		</div>
