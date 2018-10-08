@@ -7,7 +7,7 @@
 		<h1 class="text-center">Meet Our Gym Leaders</h1>
 		<div class="leader-bios">
 
-
+			
 			<div class="leader-bio">
 				<h2>Ace</h2>
 				<h3>An unlucky gambler</h3>
@@ -145,21 +145,6 @@
 				</ul>
 				
 				<p>Bellatrix was born from the stars, as they produce all elements necessary for life, and thus has an enhanced connection to her astral soul. The stars foretell all things, and whispered through the night sky that this league is a central point in the great constellation of her interstellar journey. If the heavens so decree, you will receive from her the Stars Badge.</p>
-			</div>
-
-			<div class="leader-bio">
-				<h2>Professor Crawly</h2>
-				<h3>Pokemon Entomologist</h3>
-
-				<img class="img-responsive" src="{{ asset('images/leaders/professor-crawly.jpg') }}" width="200" alt="Photo of Professor Crawly">
-
-				<ul class="list-unstyled">
-					<li><strong>Type:</strong> Bug</li>
-					<li><strong>Signature Pok&eacute;mon:</strong> Heracross, Vivillon</li>
-					<li><strong>Favorite Suborder:</strong> Rhopalocera</li>
-				</ul>
-				
-				<p>Originally from the Sevii Islands, Professor Crawly is a former colleague of Professor Plum. After turning down invitations from Plum for years, he finally has the time and ability to join the TRAZ Pokemon League. Defeat him to earn the Insecta Badge, modeled after his original work on Caterpie.</p>
 			</div>
 
 			<div class="leader-bio">
