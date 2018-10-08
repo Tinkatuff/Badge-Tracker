@@ -34,7 +34,12 @@
 								<div class="well">
 									<img src="{{ $badge->image_url }}" alt="{{ $badge }}">
 								</div>
-								<div class="badge-name">{{ $badge->name }}</div>
+								<div class="badge-name">
+									@if ($challenger->type && $badge->pivot->type_id == $challenger->type_id)
+										<i class="gym-point fa fa-medal" title="{{ $challenger->type }} Gym Point"></i>
+									@endif
+									{{ $badge->name }}
+								</div>
 							</div>
 						</div>
 					@empty
@@ -63,6 +68,12 @@
 				<div class="challenger-info">
 					<div class="since">Challenger Since <strong>{{ $challenger->joined_season }}</strong></div>
 
+						@if ($challenger->type)
+							<div class="line">
+								<label>Gym Trainer</label>
+								<div class="data">{{ $challenger->type }} Type Trainer</div>
+							</div>
+						@endif
 						@foreach ($challenger->data as $data)
 							<div class="line">
 								<label>{{ $data->name }}</label>
@@ -78,7 +89,7 @@
 						@if (!$challenger->social->isEmpty())
 							<div class="social-media">
 							@foreach ($challenger->social as $social)
-								<a href="{{ $social->url }}" target="_blank"><i class="fa fa-{{ $social->service }}-square"></i></a>
+								<a href="{{ $social->url }}" target="_blank"><i class="fab fa-{{ $social->service }}-square"></i></a>
 							@endforeach
 							</div>
 						@endif

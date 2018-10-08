@@ -4,7 +4,10 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+@import "node_modules/@fortawesome/fontawesome-pro/scss/fontawesome";
+@import "node_modules/@fortawesome/fontawesome-pro/scss/solid";
+@import "node_modules/@fortawesome/fontawesome-pro/scss/brands";
 
 @import "layout";
 @import "challengers";

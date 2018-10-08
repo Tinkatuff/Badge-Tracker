@@ -12,6 +12,10 @@ class Challenger extends Model
 		'created_at', 'updated_at', 'join_date'
 	];
 
+	function type() {
+		return $this->belongsTo('App\Models\Type');
+	}
+
 	function joined_season() {
 		return $this->belongsTo('App\Models\Season');
 	}
@@ -26,7 +30,8 @@ class Challenger extends Model
 
 	function badges() {
 		return $this->belongsToMany('App\Models\Badge', 'challenger_badge')
-			->orderBy('challenger_badge.awarded_at');
+			->orderBy('challenger_badge.awarded_at')
+			->withPivot('type_id');
 	}
 
 	function getCurrentSeasonBadgesAttribute($value) {
@@ -46,7 +51,7 @@ class Challenger extends Model
 		return parent::newPivot($parent, $attributes, $table, $exists);
 	}
 
-	function seasonBadges($season = null) {
+	function seasonBadges($season = null, $gym_point = null) {
 		if (is_null($season)) {
 			$id = Season::currentSeason()->id;
 		} elseif (is_a($season, Season::class)) {
@@ -55,7 +60,17 @@ class Challenger extends Model
 			$id = $season;
 		}
 
-		return $this->badges()->where('season_id', $id)->get();
+		$badges = $this->badges()->where('season_id', $id);
+
+		if (!is_null($gym_point) && $this->type_id) {
+			if ($gym_point) {
+				$badges = $badges->wherePivot('type_id', $this->type_id);
+			} else {
+				$badges = $badges->wherePivot('type_id', '!=', $this->type_id);
+			}
+		}
+		
+		return $badges->get();
 	}
 
 	function eligibleBadges($season = null) {
@@ -67,7 +82,7 @@ class Challenger extends Model
 			$season = $season->find($season);
 		}
 
-		$active_badges = $this->seasonBadges($season);
+		$active_badges = $this->seasonBadges($season, true);
 		return $season->badges()->whereNotIn('id', $active_badges->pluck('id'))->get();
 	}
 
@@ -79,15 +94,26 @@ class Challenger extends Model
 		return $this->name;
 	}
 
-	function awardBadge(Badge $badge) {
-		if (!$this->badges->contains($badge)) {
+	function awardBadge(Badge $badge, $type_id = null) {
+		if ($type_id != $this->type_id) {
+			$type_id = null;
+		}
+
+		$badge = $this->badges->find($badge);
+
+		if (is_null($badge)) {
 			$this->badges()->attach([
 				$badge->id => [
 					'awarded_by_id' => \Auth::user()->id,
-					'awarded_at' => \Carbon\Carbon::now()
+					'awarded_at' => \Carbon\Carbon::now(),
+					'type_id' => $type_id
 				]
 			]);
+		} else if (!is_null($type_id)) {
+			$badge->pivot->type_id = $type_id;
+			$badge->pivot->save();
 		}
+
 		$this->current_season_badges = $this->seasonBadgeCount();
 		$this->save();
 	}

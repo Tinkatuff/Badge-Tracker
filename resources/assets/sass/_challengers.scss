@@ -78,9 +78,6 @@ ol.challenger-list {
 @media (max-width: 400px) {
 	ol.challenger-list {
 		.stats {
-			.since {
-				display: none;
-			}
 			width: 50px;
 		}
 
@@ -113,6 +110,11 @@ ol.challenger-list {
 			margin-bottom: 0;
 			background-color: $near-white;
 			padding: 5px;
+			position: relative;
+		}
+
+		.gym-point {
+			color: #946e05;
 		}
 
 		img {

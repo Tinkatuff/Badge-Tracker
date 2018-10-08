@@ -12,6 +12,10 @@ class ChallengerBadgePivot extends Pivot {
 		return $this->belongsTo('App\User');
 	}
 
+	function type() {
+		return $this->belongsTo('App\Model\Type');
+	}
+
 	function challenger() {
 		return $this->belongsTo('App\Model\Challenger');
 	}

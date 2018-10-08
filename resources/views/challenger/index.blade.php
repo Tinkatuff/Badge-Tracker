@@ -33,10 +33,7 @@
 
 				<div class="key">
 					<div class="badges">
-						<i class="fa fa-shield stats-icon" aria-hidden="true" title="5 of 18 Badges Won"></i> Badges earned in {{ App\Models\Season::currentSeason() }}
-					</div>
-					<div class="since">
-						<i class="fa fa-calendar stats-icon" aria-hidden="true" title="Challenger Since Season 1"></i> First season participation
+						<i class="fa fa-shield-alt stats-icon" aria-hidden="true" title="5 of 18 Badges Won"></i> Badges earned in {{ App\Models\Season::currentSeason() }}
 					</div>
 				</div>
 
@@ -47,13 +44,15 @@
 								<h2 class="name">{{ $challenger->name }}</h2>
 								<div class="stats">
 									<span class="badges">
-										<i class="fa fa-shield" aria-hidden="true" title="5 of 18 Badges Won"></i>
+										<i class="fa fa-shield-alt" aria-hidden="true" title="5 of 18 Badges Won"></i>
 										{{ $challenger->current_season_badges }} / {{ $season_badges }}
 									</span>
-									<span class="since">
-										<i class="fa fa-calendar" aria-hidden="true" title="Challenger Since Season 1"></i>
-										{{ $challenger->joined_season }}
-									</span>
+									@if ($challenger->type)
+										<span class="type" title="{{ $challenger->type }} Type Trainer">
+											<i class="{{ $challenger->type->icon  }} fa-fw" aria-hidden="true"></i>
+											{{ $challenger->type }}
+										</span>
+									@endif
 								</div>
 							</a>
 						</li>

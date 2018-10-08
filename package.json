@@ -10,11 +10,11 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-pro": "^5.3.1",
     "axios": "^0.15.3",
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^3.2.3",
     "es6-shim": "^0.35.3",
-    "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "jquery.equal-height": "github:nikkidelrosso/jquery.equal-height",
     "jquery.sticky-footer": "github:nikkidelrosso/jquery.sticky-footer",

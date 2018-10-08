@@ -18,6 +18,16 @@
 					</div>
 
 					<div class="form-group">
+							<label for="trainer_type">Gym Trainer Type</label>
+							<select name="type_id" class="form-control" id="trainer_type">
+								<option value="">Not a gym trainer</option>
+								@foreach ($types as $type)
+									<option value="{{ $type->id }}" {{ $type->id == old('type_id', $challenger->type_id)? 'selected' : '' }}>{{ $type }} Gym</option>
+								@endforeach
+							</select>
+						</div>
+
+					<div class="form-group">
 						<label for="challenger_join_date">Join Date</label>
 						<input class="form-control" 
 							type="date" 
