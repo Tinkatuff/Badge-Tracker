@@ -99,9 +99,9 @@ class Challenger extends Model
 			$type_id = null;
 		}
 
-		$badge = $this->badges->find($badge);
+		$found_badge = $this->badges->find($badge);
 
-		if (is_null($badge)) {
+		if (is_null($found_badge)) {
 			$this->badges()->attach([
 				$badge->id => [
 					'awarded_by_id' => \Auth::user()->id,
@@ -110,8 +110,8 @@ class Challenger extends Model
 				]
 			]);
 		} else if (!is_null($type_id)) {
-			$badge->pivot->type_id = $type_id;
-			$badge->pivot->save();
+			$found_badge->pivot->type_id = $type_id;
+			$found_badge->pivot->save();
 		}
 
 		$this->current_season_badges = $this->seasonBadgeCount();
