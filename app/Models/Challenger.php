@@ -12,6 +12,24 @@ class Challenger extends Model
 		'created_at', 'updated_at', 'join_date'
 	];
 
+	protected $dedupe_relations = [
+		'data', 'social', 'badges'
+	];
+
+	public function getDedupeRelations()
+	{
+		return $this->dedupe_relations;
+	}
+
+	protected static function boot()
+	{
+		parent::boot();
+	
+		static::addGlobalScope('exclude_merged', function (\Illuminate\Database\Eloquent\Builder $builder) {
+			$builder->whereNull('merged_into_challenger_id');
+		});
+	}
+
 	function type() {
 		return $this->belongsTo('App\Models\Type');
 	}
@@ -31,7 +49,7 @@ class Challenger extends Model
 	function badges() {
 		return $this->belongsToMany('App\Models\Badge', 'challenger_badge')
 			->orderBy('challenger_badge.awarded_at')
-			->withPivot('type_id');
+			->withPivot('type_id', 'id');
 	}
 
 	function getCurrentSeasonBadgesAttribute($value) {

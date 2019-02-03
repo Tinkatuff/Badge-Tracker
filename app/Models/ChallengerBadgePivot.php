@@ -13,14 +13,28 @@ class ChallengerBadgePivot extends Pivot {
 	}
 
 	function type() {
-		return $this->belongsTo('App\Model\Type');
+		return $this->belongsTo('App\Models\Type');
 	}
 
 	function challenger() {
-		return $this->belongsTo('App\Model\Challenger');
+		return $this->belongsTo('App\Models\Challenger');
 	}
 
 	function badge() {
-		return $this->belongsTo('App\Model\Badge');
+		return $this->belongsTo('App\Models\Badge');
+	}
+	/**
+	 * Set the keys for a save update query.
+	 *
+	 * @param  \Illuminate\Database\Eloquent\Builder  $query
+	 * @return \Illuminate\Database\Eloquent\Builder
+	 */
+	protected function setKeysForSaveQuery(\Illuminate\Database\Eloquent\Builder $query)
+	{
+		if ($this->getKey()) {
+			return $query->where($this->primaryKey, $this->getAttribute($this->primaryKey));
+		} else {
+			return parent::setKeysForSaveQuery($query);
+		}
 	}
 }

@@ -7,6 +7,23 @@
 		<h1 class="text-center">Meet Our Gym Leaders</h1>
 		<div class="leader-bios">
 
+
+			{{-- @foreach ($leaders as $leader)
+				<div class="leader-bio">
+					{{ $leader->editable('name', 'h2') }}
+					{{ $leader->editable('title', 'h3') }}
+
+					<img class="img-responsive" src="{{ asset($leader->image) }}" width="200" alt="Photo of {{ $leader->name }}">
+
+					<ul class="list-unstyled">
+						<li><strong>Type:</strong> {{ $leader->editable('type') }}</li>
+						<li><strong>Signature Pok&eacute;mon:</strong> {{ $leader->editable('signature_pokemon') }}</li>
+						<li>{{ $leader->editable('flavor_label', 'strong') }} {{ $leader->editable('flavor_value') }}</li>
+					</ul>
+					
+					{{ $leader->editable('description', 'p') }}
+				</div>
+			@endforeach --}}
 			
 			<div class="leader-bio">
 				<h2>Ace</h2>

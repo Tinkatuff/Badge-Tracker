@@ -38,7 +38,7 @@
 				</div>
 
 				<ol class="challenger-list">
-					@foreach ($challengers as $challenger)
+					@forelse ($challengers as $challenger)
 						<li class="challenger">
 							<a href="{{ route('challenger.show', $challenger) }}">
 								<h2 class="name">{{ $challenger->name }}</h2>
@@ -56,7 +56,9 @@
 								</div>
 							</a>
 						</li>
-					@endforeach
+					@empty
+						<li><em>There are no challengers with badges this season.</em></li>
+					@endforelse
 				</ol>
 			</div>
 		</div>
