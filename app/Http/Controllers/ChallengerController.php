@@ -6,14 +6,20 @@ use Illuminate\Http\Request;
 
 use App\Models\Challenger;
 use App\Models\Season;
+use Auth;
 
 class ChallengerController extends Controller
 {
 	function index() {
+		$challengers = Challenger::orderBy('current_season_badges', 'DESC')
+			->orderBy('name', 'ASC');
+
+		if (Auth::guest()) {
+			$challengers->where('current_season_badges', '>', 0);
+		}
+		
 		return view('challenger.index', [
-			'challengers' => Challenger::orderBy('current_season_badges', 'DESC')
-				->orderBy('name', 'ASC')
-				->get(),
+			'challengers' => $challengers->get(),
 			'season_badges' => Season::currentSeason()->badges()->count()
 		]);
 	}
