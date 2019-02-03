@@ -1,0 +1,4 @@
+git pull
+php artisan migrate --force
+npm install
+npm run production
