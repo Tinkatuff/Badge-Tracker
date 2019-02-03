@@ -194,7 +194,7 @@
 				<p>Amoré was on set when he heard news of a nearby Pokémon league, and decided he couldn't just be a popular movie star. He had to be the most popular gym leader in it as well! Massage his ego a bit by taking a selfie with him, and he'll review your stage presence during a single or double battle (along with a chance for the Spotlight Badge!)</p>
 			</div>
 
-			{{-- @php
+			@php
 				$previews = [
 					"[̲̅e̲̅][̲̅r̲̅][̲̅r̲̅][̲̅o̲̅][̲̅r̲̅] fetching ⓜⓘⓢⓢⓘⓝⓖⓝⓞ",
 					"... Wow, sorry about that. I'm back! Okay. Check back later and we'll have more info for you."
@@ -207,7 +207,7 @@
 					<img class="img-responsive" src="{{ asset('images/leaders/missingno.png') }}" alt="???">
 					<p>{{ $preview }}</p>
 				</div>
-			@endforeach --}}
+			@endforeach
 
 		</div>
 	</div>
