@@ -136,6 +136,17 @@ class Challenger extends Model
 		$this->save();
 	}
 
+	function removeBadge(Badge $badge) {
+		if ($this->badges()->exists($badge->id)) {
+			$result = $this->badges()->detach($badge->id);
+			$this->current_season_badges = $this->seasonBadgeCount();
+			$this->save();
+		} else {
+			return true;
+		}
+		return $result;
+	}
+
 	function syncBadges($badges, $detach = true) {
 		$sync = $this->badges()->sync($badges, $detach);
 		$this->current_season_badges = $this->seasonBadgeCount();

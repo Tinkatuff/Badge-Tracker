@@ -57,9 +57,7 @@ class ChallengerController extends Controller
 	}
 
 	function deleteBadge(Request $request, Challenger $challenger, Badge $badge) {
-		if ($challenger->badges()->exists($badge->id)) {
-			$challenger->badges()->detach($badge->id);
-		}
+		$challenger->removeBadge($badge);
 		return response()->json(['success' => 'true']);
 	}
 
