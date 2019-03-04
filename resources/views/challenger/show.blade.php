@@ -32,50 +32,17 @@
 						<div class="col-xs-4 col-sm-3 equal-height">
 							<div class="badge-league">
 								<div class="well">
-									<div
-										data-id="{{ $badge->id }}"
-										data-name="{{ $badge->name }}"
-										class="delete"
-										title="Remove this badge"><i class="fa fa-times"></i></div>
+
+									@if (Auth::check() && Auth::user()->isAdmin())
+										<div
+											data-id="{{ $badge->id }}"
+											data-name="{{ $badge->name }}"
+											class="delete"
+											title="Remove this badge"><i class="fa fa-times"></i></div>
+									@endif
 									<img src="{{ $badge->image_url }}" alt="{{ $badge }}">
 								</div>
 
-								@push('scripts')
-									<script>
-										(function($) {
-											function deleteBadge(id) {
-												$('body').addClass('load-lock')
-												$.ajax({
-													url: '{{ route('admin.challenger.badge.delete', ["challenger" => $challenger, "badge" => '_BADGE_ID_']) }}'.replace("_BADGE_ID_", id),
-													data: { '_token': Laravel.csrfToken },
-													type: 'DELETE',
-													success: function (result) {
-														if (result.success) {
-															location.reload()
-														} else {
-															$('body').removeClass('load-lock')
-															alert(result.message || "Something went wrong removing this badge.")
-														}
-													},
-													error: function (request, msg, error) {
-														$('body').removeClass('load-lock')
-														alert("Something went wrong removing this badge. " + msg)
-													}
-												})
-											}
-
-											$('.badge-league .delete').click(function(e) {
-												var deleteButton = $(this)
-												var badgeName = deleteButton.data('name')
-												var badgeId = deleteButton.data('id')
-												e.preventDefault()
-												if (confirm("Are you sure you want to remove the " + badgeName + " badge? ")) {
-													deleteBadge(badgeId)
-												}
-											})
-										})(jQuery)
-									</script>
-								@endpush
 								<div class="badge-name">
 									@if ($challenger->type && $badge->pivot->type_id == $challenger->type_id)
 										<i class="gym-point fa fa-medal" title="{{ $challenger->type }} Gym Point"></i>
@@ -141,3 +108,42 @@
 		</div>
 	</div>
 @stop
+
+@if (Auth::check() && Auth::user()->isAdmin())
+	@push('scripts')
+		<script>
+			(function($) {
+				function deleteBadge(id) {
+					$('body').addClass('load-lock')
+					$.ajax({
+						url: '{{ route('admin.challenger.badge.delete', ["challenger" => $challenger, "badge" => '_BADGE_ID_']) }}'.replace("_BADGE_ID_", id),
+						data: { '_token': Laravel.csrfToken },
+						type: 'DELETE',
+						success: function (result) {
+							if (result.success) {
+								location.reload()
+							} else {
+								$('body').removeClass('load-lock')
+								alert(result.message || "Something went wrong removing this badge.")
+							}
+						},
+						error: function (request, msg, error) {
+							$('body').removeClass('load-lock')
+							alert("Something went wrong removing this badge. " + msg)
+						}
+					})
+				}
+
+				$('.badge-league .delete').click(function(e) {
+					var deleteButton = $(this)
+					var badgeName = deleteButton.data('name')
+					var badgeId = deleteButton.data('id')
+					e.preventDefault()
+					if (confirm("Are you sure you want to remove the " + badgeName + " badge? ")) {
+						deleteBadge(badgeId)
+					}
+				})
+			})(jQuery)
+		</script>
+	@endpush
+@endif
