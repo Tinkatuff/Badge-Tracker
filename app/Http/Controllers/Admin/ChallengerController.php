@@ -56,6 +56,13 @@ class ChallengerController extends Controller
 		return view('challenger.award', ['challenger' => $challenger]);
 	}
 
+	function deleteBadge(Request $request, Challenger $challenger, Badge $badge) {
+		if ($challenger->badges()->exists($badge->id)) {
+			$challenger->badges()->detach($badge->id);
+		}
+		return response()->json(['success' => 'true']);
+	}
+
 	function submitAward(Request $request, Challenger $challenger) {
 		$this->validate($request, [
 			'badge_id' => 'required|exists:badges,id',

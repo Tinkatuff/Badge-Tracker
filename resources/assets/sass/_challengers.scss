@@ -119,6 +119,31 @@ ol.challenger-list {
 			background-color: $near-white;
 			padding: 5px;
 			position: relative;
+
+
+			.delete {
+				position: absolute;
+				top: -7px;
+				right: -7px;
+				background-color: $brand-red;
+				color: white;
+				width: 1.5em;
+				border-radius: 100%;
+				box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+				transition: background-color 0.2s, opacity 0.2s;
+				opacity: 0.5;
+				display: none;
+
+				&:hover {
+					background-color: lighten($brand-red, 5%);
+					opacity: 1;
+				}
+			}
+		}
+
+
+		&:hover .delete {
+			display: block;
 		}
 
 		.gym-point {

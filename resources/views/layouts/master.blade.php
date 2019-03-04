@@ -34,6 +34,7 @@
 		@yield('footer')
 	@show
 	@stack('modals')
+	@stack('pre-scripts')
 	@stack('scripts')
 </body>
 </html>

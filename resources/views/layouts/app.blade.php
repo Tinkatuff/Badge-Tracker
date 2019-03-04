@@ -4,7 +4,7 @@
 	<link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css">
 @endpush
 
-@push('scripts')
+@push('pre-scripts')
 	<script>
 		window.Laravel = {!! json_encode([
 			'csrfToken' => csrf_token(),

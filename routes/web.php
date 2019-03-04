@@ -74,6 +74,11 @@ Route::group([
 		'uses' => 'ChallengerController@submitAward',
 		'as' => 'challenger.submitAward'
 	]);
+
+	Route::delete('/challengers/{challenger}/badge/{badge}', [
+		'uses' => 'ChallengerController@deleteBadge',
+		'as' => 'challenger.badge.delete'
+	]);
 });
 
 Route::get('/challengers', [
