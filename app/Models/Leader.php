@@ -24,7 +24,7 @@ class Leader extends Model
 
 	function editable($field, $tag = 'span') {
 		$attrs = '';
-		if (Auth::check() && Auth::user()->isAdmin()) {
+		if (Gate::alows('admin')) {
 			$attrs = sprintf(
 					' data-field="%s"',
 					e($field)

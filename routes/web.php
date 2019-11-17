@@ -41,7 +41,7 @@ Route::get('about/leaders', [
 
 Route::group([
 	'as' => 'admin.',
-	'middleware' => 'auth',
+	'middleware' => ['auth','can:admin'],
 	'namespace' => 'Admin'
 ], function() {
 

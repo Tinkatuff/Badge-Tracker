@@ -15,12 +15,12 @@
 		<h2>{{ $challenger }}</h2>
 
 
-		@if (Auth::check() && Auth::user()->isAdmin())
+		@can('admin')
 			<div class="actions">
 				<a class="btn btn-default" href="{{ route('admin.challenger.award', $challenger) }}"><i class="fa fa-shield"></i> Award Badge</a>
 				<a class="btn btn-default" href="{{ route('admin.challenger.edit', $challenger) }}"><i class="fa fa-edit"></i> Edit Profile</a>
 			</div>
-		@endif
+		@endcan
 
 		<div class="row">
 			<div class="col-md-8">
@@ -33,13 +33,13 @@
 							<div class="badge-league">
 								<div class="well">
 
-									@if (Auth::check() && Auth::user()->isAdmin())
+									@can('admin')
 										<div
 											data-id="{{ $badge->id }}"
 											data-name="{{ $badge->name }}"
 											class="delete"
 											title="Remove this badge"><i class="fa fa-times"></i></div>
-									@endif
+									@endcan
 									<img src="{{ $badge->image_url }}" alt="{{ $badge }}">
 								</div>
 
@@ -109,7 +109,7 @@
 	</div>
 @stop
 
-@if (Auth::check() && Auth::user()->isAdmin())
+@can('admin')
 	@push('scripts')
 		<script>
 			(function($) {
@@ -146,4 +146,4 @@
 			})(jQuery)
 		</script>
 	@endpush
-@endif
+@endcan

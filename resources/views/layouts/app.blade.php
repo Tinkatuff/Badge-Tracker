@@ -51,11 +51,11 @@
 				<li class="{{ App\class_if_route('active', 'about.rules') }}">
 					<a href="{{ route('about.rules') }}">Rules</a>
 				</li>
-				@if (Auth::check() && Auth::user()->isAdmin())
+				@can('admin')
 					<li class="{{ App\class_if_route('active', 'admin.challenger.create') }}">
 						<a href="{{ route('admin.challenger.create') }}"><i class="fa fa-plus"></i> New Challenger</a>
 					</li>
-				@endif
+				@endcan
 			</ul>
 			
 			<div class="clearfix">
