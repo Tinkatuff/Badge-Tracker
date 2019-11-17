@@ -61,6 +61,15 @@ class Challenger extends Model
 		return $value;
 	}
 
+	function getCurrentSeasonTypePointsAttribute($value) {
+		if (is_null($value)) {
+			$value = $this->current_season_type_points = $this->seasonTypePointCount();
+			$this->save();
+		}
+
+		return $value;
+	}
+
 	public function newPivot(Model $parent, array $attributes, $table, $exists, $using = NULL) {
 		if ($parent instanceof Badge) {
 			return new ChallengerBadgePivot($parent, $attributes, $table, $exists, $using);
@@ -108,6 +117,10 @@ class Challenger extends Model
 		return $this->badges()->where('season_id', Season::currentSeason()->id)->count();
 	}
 
+	function seasonTypePointCount() {
+		return $this->badges()->where('season_id', Season::currentSeason()->id)->where('challenger_badge.type_id', $this->type_id)->count();
+	}
+
 	function __toString() {
 		return $this->name;
 	}
@@ -133,6 +146,7 @@ class Challenger extends Model
 		}
 
 		$this->current_season_badges = $this->seasonBadgeCount();
+		$this->current_season_type_points = $this->seasonTypePointCount();
 		$this->save();
 	}
 

@@ -76,11 +76,13 @@
 			<div class="col-md-4">
 				<div class="challenger-info">
 					<div class="since">Challenger Since <strong>{{ $challenger->joined_season }}</strong></div>
-
 						@if ($challenger->type)
 							<div class="line">
 								<label>Gym Trainer</label>
-								<div class="data">{{ $challenger->type }} Type Trainer</div>
+								<div class="data">
+									{{ $challenger->type }} Type Trainer<br>
+									{{ $challenger->current_season_type_points }} points earned
+								</div>
 							</div>
 						@endif
 						@foreach ($challenger->data as $data)

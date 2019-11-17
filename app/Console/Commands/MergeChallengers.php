@@ -52,6 +52,7 @@ class MergeChallengers extends Command
 			$this->oldChallenger->merged_into_challenger_id = $this->newChallenger->id;
 			$this->oldChallenger->save();
 			$this->newChallenger->current_season_badges = null;
+			$this->newChallenger->current_season_type_points = null;
 			$this->newChallenger->save();
 		});
 	}
