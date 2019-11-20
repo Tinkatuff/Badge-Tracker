@@ -44,7 +44,7 @@
 								<h2 class="name">{{ $challenger->name }}</h2>
 								<div class="stats">
 									<span class="badges">
-										<i class="fa fa-shield-alt" aria-hidden="true" title="{{ $challenger->current_season_badges } of {{ $season_badges }} Badges Won"></i>
+										<i class="fa fa-shield-alt" aria-hidden="true" title="{{ $challenger->current_season_badges }} of {{ $season_badges }} Badges Won"></i>
 										{{ $challenger->current_season_badges }} <span class="badges-total">/ {{ $season_badges }}</span>
 									</span>
 									@if ($challenger->type)
