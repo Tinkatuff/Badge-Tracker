@@ -23,7 +23,7 @@
 					
 					{{ $leader->editable('description', 'p') }}
 				</div>
-			@endforeach --}}
+			@endforeach
 			
 			<div class="leader-bio">
 				<h2>Ace</h2>
@@ -193,9 +193,16 @@
 				
 				<p>Amoré was on set when he heard news of a nearby Pokémon league, and decided he couldn't just be a popular movie star. He had to be the most popular gym leader in it as well! Massage his ego a bit by taking a selfie with him, and he'll review your stage presence during a single or double battle (along with a chance for the Spotlight Badge!)</p>
 			</div>
+			--}}
 
 			@php
 				$previews = [
+					"Hey guys, Sword and Shield just came out! Bear with us while we figure out what we're doing for this next generation of core Pok&eacute;mon game.",
+					"What's up? Get out there! Go play the new games!",
+					"Umm...",
+					"... &hellip; ..... ..... please ... go ...... &hellip;",
+					"What... Whคt... █▄█▄ 🅔🅡🅡🅞🅡   ͤ ͬ ͬ ͦ ͬ ＥＲǝͤɹͬɹͬoⷪɹͬＲＯＲ eͤrͬrͬoⷪrͬ  ɹoɹɹǝ ᴇʀʀᴏʀ ¿¿¿",
+					"`▄´ (()) █▄█ . ▄█▀ ╠╣ (()) █▄█ █▄ █)) █\█ '▀█▀ . █З █▓ . ╠╣ █▓ █▀▄ █▓",
 					"[̲̅e̲̅][̲̅r̲̅][̲̅r̲̅][̲̅o̲̅][̲̅r̲̅] fetching ⓜⓘⓢⓢⓘⓝⓖⓝⓞ",
 					"... Wow, sorry about that. I'm back! Okay. Check back later and we'll have more info for you."
 				];
