@@ -60,7 +60,7 @@
 			
 			<div class="clearfix">
 				<a class="btn btn-facebook navbar-btn" href="https://www.facebook.com/groups/418038738406752" target="_blank">
-					<i class="fa fa-facebook" aria-title="Facebook" aria-hidden="true"></i>
+					<i class="fab fa-facebook" aria-title="Facebook" aria-hidden="true"></i>
 					Join <span class="visible-xs-inline">Facebook</span> Group
 				</a>
 				@if (Auth::check())
