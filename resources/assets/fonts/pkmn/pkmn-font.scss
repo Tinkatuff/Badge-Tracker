@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "pokemon-type-icons";
+  src:url("pokemon-type-icons.eot");
+  src:url("pokemon-type-icons.eot?#iefix") format("embedded-opentype"),
+    url("pokemon-type-icons.woff") format("woff"),
+    url("pokemon-type-icons.ttf") format("truetype"),
+    url("pokemon-type-icons.svg#pokemon-type-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "pokemon-type-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="pkmn-"]:before,
+[class*=" pkmn-"]:before {
+  font-family: "pokemon-type-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pkmn-type-normal:before {
+  content: "\e000";
+}
+.pkmn-type-fire:before {
+  content: "\e001";
+}
+.pkmn-type-fighting:before {
+  content: "\e002";
+}
+.pkmn-type-water:before {
+  content: "\e003";
+}
+.pkmn-type-flying:before {
+  content: "\e004";
+}
+.pkmn-type-grass:before {
+  content: "\e005";
+}
+.pkmn-type-poison:before {
+  content: "\e006";
+}
+.pkmn-type-electric:before {
+  content: "\e007";
+}
+.pkmn-type-ground:before {
+  content: "\e008";
+}
+.pkmn-type-psychic:before {
+  content: "\e009";
+}
+.pkmn-type-rock:before {
+  content: "\e00a";
+}
+.pkmn-type-ice:before {
+  content: "\e00b";
+}
+.pkmn-type-bug:before {
+  content: "\e00c";
+}
+.pkmn-type-dragon:before {
+  content: "\e00d";
+}
+.pkmn-type-ghost:before {
+  content: "\e00e";
+}
+.pkmn-type-dark:before {
+  content: "\e00f";
+}
+.pkmn-type-steel:before {
+  content: "\e010";
+}
+.pkmn-type-fairy:before {
+  content: "\e011";
+}
+
+
+$pkmn-type-color-normal: #848484;
+$pkmn-type-color-fire: #d38937;
+$pkmn-type-color-water: #2283a3;
+$pkmn-type-color-fighting: #cc5363;
+$pkmn-type-color-flying: #93a6c4;
+$pkmn-type-color-grass: #249c59;
+$pkmn-type-color-poison: #b463b1;
+$pkmn-type-color-electric: #c9ab39;
+$pkmn-type-color-psychic: #d57d79;
+$pkmn-type-color-rock: #a69065;
+$pkmn-type-color-ice: #53bdb3;
+$pkmn-type-color-ground: #ca8b64;
+$pkmn-type-color-bug: #8cab33;
+$pkmn-type-color-dragon: #1e638d;
+$pkmn-type-color-ghost: #5666a0;
+$pkmn-type-color-dark: #4c4b4a;
+$pkmn-type-color-steel: #279597;
+$pkmn-type-color-fairy: #d395c2;
+
+.pkmn-type-color {
+  &.pkmn-type-normal, &--normal {
+    color: $pkmn-type-color-normal !important;
+  }
+  &.pkmn-type-fire, &--fire {
+    color: $pkmn-type-color-fire !important;
+  }
+  &.pkmn-type-fighting, &--fighting {
+    color: $pkmn-type-color-fighting !important;
+  }
+  &.pkmn-type-water, &--water {
+    color: $pkmn-type-color-water !important;
+  }
+  &.pkmn-type-flying, &--flying {
+    color: $pkmn-type-color-flying !important;
+  }
+  &.pkmn-type-grass, &--grass {
+    color: $pkmn-type-color-grass !important;
+  }
+  &.pkmn-type-poison, &--poison {
+    color: $pkmn-type-color-poison !important;
+  }
+  &.pkmn-type-electric, &--electric {
+    color: $pkmn-type-color-electric !important;
+  }
+  &.pkmn-type-psychic, &--psychic {
+    color: $pkmn-type-color-psychic !important;
+  }
+  &.pkmn-type-rock, &--rock {
+    color: $pkmn-type-color-rock !important;
+  }
+  &.pkmn-type-ice, &--ice {
+    color: $pkmn-type-color-ice !important;
+  }
+  &.pkmn-type-ground, &--ground {
+    color: $pkmn-type-color-ground !important;
+  }
+  &.pkmn-type-bug, &--bug {
+    color: $pkmn-type-color-bug !important;
+  }
+  &.pkmn-type-dragon, &--dragon {
+    color: $pkmn-type-color-dragon !important;
+  }
+  &.pkmn-type-ghost, &--ghost {
+    color: $pkmn-type-color-ghost !important;
+  }
+  &.pkmn-type-dark, &--dark {
+    color: $pkmn-type-color-dark !important;
+  }
+  &.pkmn-type-steel, &--steel {
+    color: $pkmn-type-color-steel !important;
+  }
+  &.pkmn-type-fairy, &--fairy {
+    color: $pkmn-type-color-fairy !important;
+  }
+}

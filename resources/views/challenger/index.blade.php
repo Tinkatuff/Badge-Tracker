@@ -49,7 +49,7 @@
 									</span>
 									@if ($challenger->type)
 										<span class="trainer-type" title="{{ $challenger->type }} Type Trainer">
-											<i class="{{ $challenger->type->icon  }} fa-fw" aria-hidden="true"></i>
+											<i class="{{ $challenger->type->icon  }} pkmn-type-color" aria-hidden="true"></i>
 											<span class="trainer-type-points">{{ $challenger->current_season_type_points}}</span>
 										</span>
 									@endif

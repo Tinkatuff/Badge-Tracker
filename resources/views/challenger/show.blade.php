@@ -40,14 +40,17 @@
 											class="delete"
 											title="Remove this badge"><i class="fa fa-times"></i></div>
 									@endcan
+									@if ($challenger->type && $badge->pivot->type_id == $challenger->type_id)
+										<div class="type-point">
+											<i class="{{ $challenger->type->icon }} pkmn-type-color" 
+												title="{{ $challenger->type }} Gym Point Earned"></i>
+										</div>
+									@endif
 									<img src="{{ $badge->image_url }}" alt="{{ $badge }}">
 								</div>
 
 								<div class="badge-name">
-									@if ($challenger->type && $badge->pivot->type_id == $challenger->type_id)
-										<i class="gym-point fa fa-medal" title="{{ $challenger->type }} Gym Point"></i>
-									@endif
-									{{ $badge->name }}
+									<i class="gym-point fa fa-medal"></i> {{ $badge->name }}
 								</div>
 							</div>
 						</div>
@@ -78,10 +81,10 @@
 					<div class="since">Challenger Since <strong>{{ $challenger->joined_season }}</strong></div>
 						@if ($challenger->type)
 							<div class="line">
-								<label>Gym Trainer</label>
+								<label>Type</label>
 								<div class="data">
-									{{ $challenger->type }} Type Trainer<br>
-									{{ $challenger->current_season_type_points }} points earned
+									<i class="{{ $challenger->type->icon }} pkmn-type-color icon-big" title="{{ $challenger->type }} Type Trainer" aria-hidden="true"></i>
+									{{ $challenger->type }} Trainer
 								</div>
 							</div>
 						@endif
