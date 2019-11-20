@@ -120,19 +120,19 @@ ol.challenger-list {
 			padding: 5px;
 			position: relative;
 
+			$icon-size: 25px;
 			.type-point {
 				position: absolute;
 				top: -7px;
 				left: -7px;
-				font-size: 30px;
+				font-size: $icon-size;
 				text-align: center;
 				text-shadow: 2px 2px rgba(0,0,0,0.1);
 				background-color: rgba(255, 255, 255, 0.5);
 				border-radius: 100%;
 				border: 1px solid $lt-gray;
-				line-height: 1.2em;
-				width: 1.2em;
-				height: 1.2em;
+				width: $icon-size * 1.5;
+				height: $icon-size * 1.5;
 			}
 
 			.delete {
