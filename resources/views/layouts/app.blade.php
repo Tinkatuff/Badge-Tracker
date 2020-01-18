@@ -51,6 +51,7 @@
 				<li class="{{ App\class_if_route('active', 'about.rules') }}">
 					<a href="{{ route('about.rules') }}">Rules</a>
 				</li>
+				{{-- To do: Add an "upcoming events" page --}}
 				@can('admin')
 					<li class="{{ App\class_if_route('active', 'admin.challenger.create') }}">
 						<a href="{{ route('admin.challenger.create') }}"><i class="fa fa-plus"></i> New Challenger</a>

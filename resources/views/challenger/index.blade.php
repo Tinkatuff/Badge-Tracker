@@ -34,6 +34,7 @@
 				<div class="key">
 					<div class="badges">
 						<i class="fa fa-shield-alt stats-icon" aria-hidden="true" title="5 of 18 Badges Won"></i> Badges earned in {{ App\Models\Season::currentSeason() }}
+						{{-- To do: Allow users to see old badge totals in some way --}}
 					</div>
 				</div>
 

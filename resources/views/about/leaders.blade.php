@@ -7,7 +7,8 @@
 		<h1 class="text-center">Meet Our Gym Leaders</h1>
 		<div class="leader-bios">
 
-
+			{{-- To do: Finish making these editable and stored in the DB --}}
+			
 			{{-- @foreach ($leaders as $leader)
 				<div class="leader-bio">
 					{{ $leader->editable('name', 'h2') }}

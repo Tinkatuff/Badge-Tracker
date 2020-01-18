@@ -112,6 +112,8 @@
 			</div>
 		</div>
 	</div>
+
+	{{-- To do: Add a back to list button --}}
 @stop
 
 @can('admin')
