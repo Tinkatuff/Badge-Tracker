@@ -46,6 +46,16 @@ class Challenger extends Model
 		return $this->hasMany('App\Models\ChallengerSocial');
 	}
 
+	function seasons()
+	{
+		return $this->belongsToMany('App\Models\Season', 'challenger_season')->withTimestamps();
+	}
+
+	function currentSeason()
+	{
+		return $this->seasons()->where('is_current', true);
+	}
+
 	function badges() {
 		return $this->belongsToMany('App\Models\Badge', 'challenger_badge')
 			->orderBy('challenger_badge.awarded_at')
@@ -125,6 +135,25 @@ class Challenger extends Model
 		return $this->name;
 	}
 
+	function isRegistered($season = null)
+	{
+		if (is_null($season)) {
+			$season = Season::currentSeason();
+		}
+		$this->load('seasons');
+		return $this->seasons->contains($season);
+	}
+
+	function registerForSeason($season = null) {
+		if (is_null($season)) {
+			$season = Season::currentSeason();
+		}
+
+		if (!$this->isRegistered($season)) {
+			$this->seasons()->attach($season);
+		}
+	}
+
 	function awardBadge(Badge $badge, $type_id = null) {
 		if ($type_id != $this->type_id) {
 			$type_id = null;
@@ -144,6 +173,8 @@ class Challenger extends Model
 			$found_badge->pivot->type_id = $type_id;
 			$found_badge->pivot->save();
 		}
+
+		$this->registerForSeason($badge->season);
 
 		$this->current_season_badges = $this->seasonBadgeCount();
 		$this->current_season_type_points = $this->seasonTypePointCount();

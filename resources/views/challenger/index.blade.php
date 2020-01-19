@@ -39,24 +39,8 @@
 				</div>
 
 				<ol class="challenger-list">
-					@forelse ($challengers as $challenger)
-						<li class="challenger">
-							<a href="{{ route('challenger.show', $challenger) }}">
-								<h2 class="name">{{ $challenger->name }}</h2>
-								<div class="stats">
-									<span class="badges">
-										<i class="fa fa-shield-alt" aria-hidden="true" title="{{ $challenger->current_season_badges }} of {{ $season_badges }} Badges Won"></i>
-										{{ $challenger->current_season_badges }} <span class="badges-total">/ {{ $season_badges }}</span>
-									</span>
-									@if ($challenger->type)
-										<span class="trainer-type" title="{{ $challenger->type }} Type Trainer">
-											<i class="{{ $challenger->type->icon  }} pkmn-type-color" aria-hidden="true"></i>
-											<span class="trainer-type-points">{{ $challenger->current_season_type_points}}</span>
-										</span>
-									@endif
-								</div>
-							</a>
-						</li>
+					@forelse ($challengers->merge($inactive) as $challenger)
+						@include('challenger._loop', ['challenger' => $challenger, 'active' => $challenger->is_active ?? true])
 					@empty
 						<li><em>Welcome to the new season! No challengers have won any badges yet so there's not much to look at here right now. Check back after our first event!</em></li>
 					@endforelse

@@ -25,6 +25,7 @@
 		@endif
 		{{ config('app.name') }}
 	</title>
+	<script src="https://kit.fontawesome.com/6525c9bb08.js" crossorigin="anonymous"></script>
 	@stack('styles')
 </head>
 <body>

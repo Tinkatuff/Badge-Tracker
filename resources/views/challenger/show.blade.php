@@ -14,11 +14,13 @@
 		<h1 class="subtitled">Challenger</h1>
 		<h2>{{ $challenger }}</h2>
 
-
 		@can('admin')
 			<div class="actions">
-				<a class="btn btn-default" href="{{ route('admin.challenger.award', $challenger) }}"><i class="fa fa-shield"></i> Award Badge</a>
+				<a class="btn btn-default" href="{{ route('admin.challenger.award', $challenger) }}"><i class="fa fa-shield-check"></i> Award Badge</a>
 				<a class="btn btn-default" href="{{ route('admin.challenger.edit', $challenger) }}"><i class="fa fa-edit"></i> Edit Profile</a>
+				@if ($current_season && !$challenger->isRegistered())
+					<a class="btn btn-default" href="{{ route('admin.challenger.register', $challenger) }}"><i class="fa fa-user-plus"></i> Register for {{ $current_season }}</a>
+				@endif
 			</div>
 		@endcan
 
@@ -66,12 +68,23 @@
 				<div class="row badge-list">
 					@foreach ($season_badges_inactive as $badge)
 						<div class="col-xs-4 col-sm-3 equal-height">
-							<div class="badge-league inactive">
+							@can('admin')
+								<a class="badge-league inactive" href="{{ route('admin.challenger.award', [
+										'challenger' => $challenger, 
+										'badge' => $badge
+									]) }}">
+							@else
+								<div class="badge-league inactive">
+							@endcan
 								<div class="well">
 									<img src="{{ $badge->image_url }}" alt="{{ $badge }}" class="equal-height">
 								</div>
 								<div class="badge-name">{{ $badge->name }}</div>
-							</div>
+							@can('admin')
+								</a>
+							@else
+								</div>
+							@endcan
 						</div>
 					@endforeach
 				</div>

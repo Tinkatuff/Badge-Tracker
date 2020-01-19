@@ -18,7 +18,7 @@
 							<label for="awarded_badge_id">Badge</label>
 							<select name="badge_id" class="form-control" id="awarded_badge_id" required>
 								@foreach($challenger->eligibleBadges() as $badge)
-									<option value="{{ $badge->id }}">{{ $badge }} ({{ $badge->type }})</option>
+									<option value="{{ $badge->id }}" {{ App\selected($badge, $selectedBadge) }}>{{ $badge }} ({{ $badge->type }})</option>
 								@endforeach
 							</select>
 						</div>
@@ -35,8 +35,8 @@
 						@endif
 
 						<div class="text-right">
-							<a href="{{ route('challenger.show', $challenger) }}" class="btn btn-default"><i class="fa fa-x"></i> Cancel</a>
-							<button class="btn btn-primary" type="submit"><i class="fa fa-edit"></i> Award Badge</button>
+							<a href="{{ route('challenger.show', $challenger) }}" class="btn btn-default pull-left"><i class="fa fa-times"></i> Cancel</a>
+							<button class="btn btn-primary" type="submit"><i class="fad fa-sparkles"></i> Award Badge</button>
 						</div>
 					</form>
 					@endif

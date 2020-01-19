@@ -65,7 +65,7 @@ Route::group([
 		'as' => 'challenger.update'
 	]);
 
-	Route::get('/challengers/{challenger}/award', [
+	Route::get('/challengers/{challenger}/award/{badge?}', [
 		'uses' => 'ChallengerController@award',
 		'as' => 'challenger.award'
 	]);
@@ -79,6 +79,18 @@ Route::group([
 		'uses' => 'ChallengerController@deleteBadge',
 		'as' => 'challenger.badge.delete'
 	]);
+
+
+	Route::get('/challengers/{challenger}/register', [
+		'uses' => 'ChallengerController@showSeasonRegistration',
+		'as' => 'challenger.register'
+	]);
+	
+	Route::post('/challengers/{challenger}/register', [
+		'uses' => 'ChallengerController@register',
+		'as' => 'challenger.register.submit'
+	]);
+
 });
 
 Route::get('/challengers', [

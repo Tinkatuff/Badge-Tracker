@@ -20,3 +20,9 @@ function class_if_route( $class, $route ) {
 
 	return '';
 }
+
+function selected($a, $b, $output = "selected") {
+	if ($a == $b) {
+		return $output;
+	}
+}

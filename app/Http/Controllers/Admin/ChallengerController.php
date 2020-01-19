@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Challenger;
 use App\Models\Badge;
 use App\Models\Type;
+use App\Models\Season;
 use Carbon\Carbon;
 
 class ChallengerController extends Controller
@@ -52,8 +53,11 @@ class ChallengerController extends Controller
 		return redirect()->route('challenger.show', $challenger)->with('message', 'Successfully updated challenger profile');
 	}
 
-	function award(Challenger $challenger) {
-		return view('challenger.award', ['challenger' => $challenger]);
+	function award(Challenger $challenger, Badge $badge) {
+		return view('challenger.award', [
+			'challenger' => $challenger,
+			'selectedBadge' => $badge
+		]);
 	}
 
 	function deleteBadge(Request $request, Challenger $challenger, Badge $badge) {
@@ -72,5 +76,27 @@ class ChallengerController extends Controller
 		$challenger->awardBadge($badge, $request->type_id);
 		
 		return redirect()->route('challenger.show', $challenger)->with('message', sprintf('Successfully awarded the %s', $badge));
+	}
+
+	function showSeasonRegistration(Challenger $challenger) {
+		$current_season = Season::currentSeason();
+
+		return view('challenger.register', [
+			'challenger' => $challenger,
+			'current_season' => $current_season,
+			'types' => Type::all()
+		]);
+	}
+
+	function register(Challenger $challenger, Request $request) {
+		$this->validate($request, [
+			'type_id' => 'sometimes|nullable|exists:types,id'
+		]);
+
+		$challenger->registerForSeason();
+		$challenger->fill($request->only('type_id'));
+		$challenger->save();
+
+		return redirect()->route('challenger.show', $challenger)->with('message', 'Successfully registered challenger');	
 	}
 }

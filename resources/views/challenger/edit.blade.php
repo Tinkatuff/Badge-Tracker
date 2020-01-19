@@ -42,14 +42,14 @@
 						<select name="joined_season_id" class="form-control" id="challenger_join_season" required>
 							@foreach(App\Models\Season::all() as $season)
 								<option value="{{ $season->id }}"
-									{{ $season->id == old('joined_season_id', $challenger->joined_season_id)? 'selected' : '' }}>
+									{{ App\selected(old('joined_season_id', $challenger->joined_season_id), $season->id) }}>
 									{{ $season }}
 								</option>
 							@endforeach
 						</select>
 					</div>
 					<div class="text-right">
-						<a href="{{ route('challenger.show', $challenger) }}" class="btn btn-default"><i class="fa fa-x"></i> Cancel changes</a>
+						<a href="{{ route('challenger.show', $challenger) }}" class="btn btn-default pull-left"><i class="fa fa-times"></i> Cancel changes</a>
 						<button class="btn btn-primary" type="submit"><i class="fa fa-edit"></i> Update Challenger Profile</button>
 					</div>
 				</form>
