@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\MergeChallengers::class
+        Commands\MergeChallengers::class,
+        Commands\NewSeason::class
     ];
 
     /**

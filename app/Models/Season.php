@@ -40,13 +40,26 @@ class Season extends Model
 		return null;
 	}
 
+	static function unsetCurrentSeason($notSeasonID = null)
+	{
+		$query = Season::where('is_current', true);
+		if (!is_null($notSeasonID)) {
+			$query->where('id', '!=', $notSeasonID);
+		}
+
+		with(clone $query)->whereNull('end_date')->update(['end_date' => Carbon::now()]);
+		$query->update(['is_current' => false]);
+
+		Challenger::whereNotNull('current_season_badges')->update(['current_season_badges' => null]);
+		Challenger::whereNotNull('current_season_type_points')->update(['current_season_type_points' => null]);
+	}
+
 	function setCurrent() {
 		if ($this->badges()->count() < 1) {
 			return false;
 		}
 
-		Season::where('is_current', true)->update(['is_current' => false]);
-		Challenger::whereNotNull('current_season_badges')->update(['current_season_badges' => null]);
+		Season::unsetCurrentSeason($this->id);
 		$this->is_current = true;
 		$this->save();
 		return true;
