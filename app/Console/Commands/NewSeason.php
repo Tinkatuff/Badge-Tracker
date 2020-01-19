@@ -77,9 +77,9 @@ class NewSeason extends Command
             'name' => 'Update season name',
             'date' => 'Update season start date',
             'current' => 'Set season current',
-            //'preview' => 'View current data',
             'add badge' => 'Add badges',
-            'update badge' => 'Update badge',
+            'remove badge' => 'Remove a badge',
+            'update badge' => 'Update a badge',
             'save' => 'Finish and save season',
             'discard' => 'Discard changes and quit'
         ];
@@ -92,6 +92,7 @@ class NewSeason extends Command
             case 'date': $this->updateSeasonStartDate(); $this->showMenu(); break;
             case 'current': $this->updateSeasonIsCurrent(); $this->showMenu(); break;
             case 'add badge': $this->addBadges(); $this->showMenu(); break;
+            case 'remove badge': $this->removeBadge(); $this->showMenu(); break;
             case 'update badge': $this->updateBadge($this->selectBadge()); $this->showMenu(); break;
             case 'save': $this->confirmSaveAndQuit(); break;
             case 'discard': $this->discardAndQuit(); break;
@@ -167,9 +168,25 @@ class NewSeason extends Command
         return $this->badges[$badge];
     }
 
+    protected function removeBadge()
+    {
+        $cancel = 'xx';
+        $badgeType = $this->choice('Remove which badge?', $this->badges + [$cancel => "Cancel"]);
+        if ($badgeType == $cancel) {
+            return;
+        }
+
+        $badge = $this->badges[$badgeType];
+        if ($this->confirm("Remove the {$badge->type} type badge from {$this->season}?")) {
+            $this->types[sprintf('%02d', $badge->type->id)] = $badge->type;
+            unset($this->badges[$badgeType]);
+        }
+    }
+
     protected function updateBadge($badge)
     {
-        $badge->name = $this->ask("Enter {$badge->type->name} type badge name", $badge->name);
+        $oldNames = Badge::where('type_id', '=', $badge->type->id)->pluck('name')->toArray();
+        $badge->name = $this->anticipate("Enter {$badge->type->name} type badge name", $oldNames, $badge->name);
         $badge->image = $this->choice('Select badge image', $files = $this->refreshBadgeFiles(), array_search($badge->image, $files) ?: null);
         return $badge;
     }
