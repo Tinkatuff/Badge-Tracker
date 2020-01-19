@@ -58,7 +58,7 @@
 							</a>
 						</li>
 					@empty
-						<li><em>There are no challengers with badges this season.</em></li>
+						<li><em>Welcome to the new season! No challengers have won any badges yet so there's not much to look at here right now. Check back after our first event!</em></li>
 					@endforelse
 				</ol>
 			</div>
