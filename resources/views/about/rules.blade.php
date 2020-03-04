@@ -38,7 +38,7 @@
 				<p>No direct evasion increasing moves can be used, which only applies to Minimize and Double Team. Indirect effects are allowed, such as certain abilities such as Moody, items such as bright powder, or the random chance of Acupuncture.</p>
 				
 				<h3>Banned Pok&eacute;mon</h3>
-				<p>All Pok&eacute;mon used must be numbered in the Galar pokedex. The following Pok&eacute;mon are additionally not allowed:</p>
+				<p>All Pok&eacute;mon used must be obtainable through offline gameplay of the most recent version of Sword and/or Shield. The following Pok&eacute;mon are additionally not allowed:</p>
 		
 				@php
 					$unallowed = [
